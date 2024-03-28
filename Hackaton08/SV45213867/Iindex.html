@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Página</title>
+</head>
+<body>
+    <h1>BIENBENIDO A MI PAGINA</h1>
+    <p>Por favor, elige una opción:</p>
+    <button onclick="descargarDocumentoDrive()">Descargar Documento Word (Google Drive)</button>
+    <button onclick="irOtraPagina()">Ir a Otra Página</button>
+
+    <script>
+      
+
+        function descargarDocumentoDrive() {
+            // URL del documento Word en Google Drive
+            var urlDocumentoDrive = 'https://docs.google.com/document/d/1u3BpeGxeXXxVTeyeTZRS2sqGWpvjONFR/edit?usp=sharing&ouid=105489057942231415742&rtpof=true&sd=true';
+            // Redireccionar al enlace de descarga directa desde Google Drive
+            window.location.href = urlDocumentoDrive;
+        }
+
+        function irOtraPagina() {
+            // URL de la otra página
+            var urlOtraPagina = 'https://prezi.com/view/wdKhJUwLpqgIUFpWak9t/';
+            // Redireccionar a la otra página
+            window.location.href = urlOtraPagina;
+        }
+    </script>
+</body>
+</html>
