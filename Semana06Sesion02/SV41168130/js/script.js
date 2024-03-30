@@ -125,9 +125,14 @@ let arrCliente = [];
 let admin = new Administrador("Roberto", "Pineda", "CE 001575291", "Principal")
 
 // eventos de los botones
+//<<<<<<< HEAD:Semana06Sesion02/d19423/js/script.js
+//document.getElementById("recibirDispositivo").addEventListener("click", recibirDispositivo);
+//document.getElementById("borrarData").addEventListener("click", borrarData);
+//=======
 document.getElementById("recibirDispositivo").addEventListener("click", recibirDispositivo);
 document.getElementById("testDatabase").addEventListener("click", LoadDatabase);
 document.getElementById("borrarData").addEventListener("click", borrarData);
+//>>>>>>> fuentes/main:Semana06Sesion02/SV41168130/js/script.js
 
 
 // callback del evento del boton recibirDispositivo
@@ -193,7 +198,7 @@ function init() {
 
 }
 
-var $table = $('#tblDispositivos');
+//var $table = $('#tblDispositivos');
 
 // evento cuando se termina de cargar la pagina web
 document.addEventListener("DOMContentLoaded", (event) => {
