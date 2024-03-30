@@ -1,0 +1,16 @@
+[{
+  "_id": {
+    "$oid": "66087d32d34a2174b29c12ef"
+  },
+  "gestionNombre": "Personal_1",
+  "departamento": "DepartamentoPersonal_1",
+  "cargo": "Trabajador"
+},
+{
+  "_id": {
+    "$oid": "66087d32d34a2174b29c12f0"
+  },
+  "gestionNombre": "Personal_2",
+  "departamento": "DepartamentoPersonal_2",
+  "cargo": "Trabajador"
+}]
