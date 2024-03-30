@@ -1,0 +1,69 @@
+[{
+  "_id": {
+    "$oid": "660848d2f5fe34fc242416e8"
+  },
+  "ID_Producto": "I1",
+  "Nombre": "Mesa",
+  "Costo": 80,
+  "Precio_venta": 150,
+  "Insumos": [
+    {
+      "id_Insumo": 1,
+      "cantidad": 2
+    },
+    {
+      "id_Insumo": 2,
+      "cantidad": 20
+    },
+    {
+      "id_Insumo": 3,
+      "cantidad": 1
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "660848d2f5fe34fc242416e9"
+  },
+  "ID_Producto": "I2",
+  "Nombre": "Silla",
+  "Costo": 30,
+  "Precio_venta": 60,
+  "Insumos": [
+    {
+      "id_Insumo": 1,
+      "cantidad": 1
+    },
+    {
+      "id_Insumo": 2,
+      "cantidad": 10
+    },
+    {
+      "id_Insumo": 3,
+      "cantidad": 0.5
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "660848d2f5fe34fc242416ea"
+  },
+  "ID_Producto": "I3",
+  "Nombre": "Armario",
+  "Costo": 200,
+  "Precio_venta": 400,
+  "Insumos": [
+    {
+      "id_Insumo": 1,
+      "cantidad": 5
+    },
+    {
+      "id_Insumo": 2,
+      "cantidad": 50
+    },
+    {
+      "id_Insumo": 4,
+      "cantidad": 2
+    }
+  ]
+}]

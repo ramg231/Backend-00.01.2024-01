@@ -1,0 +1,80 @@
+[{
+  "_id": {
+    "$oid": "66084e0cf5fe34fc242416eb"
+  },
+  "DNI": "12345678",
+  "Nombres": "Juan",
+  "Apellidos": "Perez"
+},
+{
+  "_id": {
+    "$oid": "66084e0cf5fe34fc242416ec"
+  },
+  "DNI": "23456789",
+  "Nombres": "María",
+  "Apellidos": "López"
+},
+{
+  "_id": {
+    "$oid": "66084e0cf5fe34fc242416ed"
+  },
+  "DNI": "34567890",
+  "Nombres": "Carlos",
+  "Apellidos": "González"
+},
+{
+  "_id": {
+    "$oid": "66084e0cf5fe34fc242416ee"
+  },
+  "DNI": "45678901",
+  "Nombres": "Ana",
+  "Apellidos": "Martínez"
+},
+{
+  "_id": {
+    "$oid": "66084e0cf5fe34fc242416ef"
+  },
+  "DNI": "56789012",
+  "Nombres": "Pedro",
+  "Apellidos": "Rodríguez"
+},
+{
+  "_id": {
+    "$oid": "66084e0cf5fe34fc242416f0"
+  },
+  "DNI": "67890123",
+  "Nombres": "Laura",
+  "Apellidos": "Díaz"
+},
+{
+  "_id": {
+    "$oid": "66084e0cf5fe34fc242416f1"
+  },
+  "DNI": "78901234",
+  "Nombres": "Diego",
+  "Apellidos": "Sánchez"
+},
+{
+  "_id": {
+    "$oid": "66084e0cf5fe34fc242416f2"
+  },
+  "DNI": "89012345",
+  "Nombres": "Sofía",
+  "Apellidos": "Gómez"
+},
+{
+  "_id": {
+    "$oid": "66084e0cf5fe34fc242416f3"
+  },
+  "DNI": "90123456",
+  "Nombres": "Elena",
+  "Apellidos": "Pérez"
+},
+{
+  "_id": {
+    "$oid": "66084e0cf5fe34fc242416f4"
+  },
+  "DNI": "01234567",
+  "Nombres": "Miguel",
+  "Apellidos": "Fernández"
+}]
