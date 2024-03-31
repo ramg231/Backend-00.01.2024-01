@@ -1,0 +1,50 @@
+[{
+  "_id": {
+    "$oid": "6609a2a6d33b8faddd91c0d3"
+  },
+  "nombre": "Juan Pérez",
+  "cargo": "Carpintero",
+  "salario": 2000,
+  "fecha_contratacion": "2023-01-15",
+  "estado": "ocupado"
+},
+{
+  "_id": {
+    "$oid": "6609a2a6d33b8faddd91c0d4"
+  },
+  "nombre": "María González",
+  "cargo": "Asistente de producción",
+  "salario": 1500,
+  "fecha_contratacion": "2023-02-10",
+  "estado": "desocupado"
+},
+{
+  "_id": {
+    "$oid": "6609a2a6d33b8faddd91c0d5"
+  },
+  "nombre": "Pedro Ramírez",
+  "cargo": "Gerente de producción",
+  "salario": 3000,
+  "fecha_contratacion": "2022-12-01",
+  "estado": "desocupado"
+},
+{
+  "_id": {
+    "$oid": "6609a905d33b8faddd91c0e2"
+  },
+  "nombre": "Luis Torres",
+  "cargo": "Carpintero",
+  "salario": 2000,
+  "fecha_contratacion": "2023-01-15",
+  "estado": "ocupado"
+},
+{
+  "_id": {
+    "$oid": "6609a905d33b8faddd91c0e3"
+  },
+  "nombre": "Javier Rodríguez",
+  "cargo": "Técnico de mantenimiento",
+  "salario": 2200,
+  "fecha_contratacion": "2022-11-05",
+  "estado": "desocupado"
+}]
