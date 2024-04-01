@@ -1,0 +1,60 @@
+[{
+  "_id": {
+    "$oid": "660a40210f884532efdeaa4c"
+  },
+  "Descripcion": "Bisagras",
+  "Costo": "6$",
+  "Unidad": "und",
+  "Stock": 400,
+  "Fecha_Pedido": {
+    "$date": "2024-04-30T05:00:00.000Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "660a40210f884532efdeaa4d"
+  },
+  "Descripcion": "Llaves de cajón",
+  "Costo": "8$",
+  "Unidad": "par",
+  "Stock": 250,
+  "Fecha_Pedido": {
+    "$date": "2024-05-01T07:00:00.000Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "660a40210f884532efdeaa4e"
+  },
+  "Descripcion": "Pintura blanca",
+  "Costo": "12$",
+  "Unidad": "litro",
+  "Stock": 150,
+  "Fecha_Pedido": {
+    "$date": "2024-05-02T09:00:00.000Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "660a40210f884532efdeaa4f"
+  },
+  "Descripcion": "Bisagras doradas",
+  "Costo": "10$",
+  "Unidad": "par",
+  "Stock": 300,
+  "Fecha_Pedido": {
+    "$date": "2024-05-03T11:00:00.000Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "660a40210f884532efdeaa50"
+  },
+  "Descripcion": "Tablas de roble",
+  "Costo": "25$",
+  "Unidad": "metros cúbicos",
+  "Stock": 50,
+  "Fecha_Pedido": {
+    "$date": "2024-05-04T13:00:00.000Z"
+  }
+}]
