@@ -1,0 +1,1 @@
+{"indexes":[{"v":{"$numberInt":"2"},"key":{"_id":{"$numberInt":"1"}},"name":"_id_"}],"uuid":"364f32df83e74b42a0f41ce7a454e8f8","collectionName":"compra_insumos_materia","type":"collection"}
