@@ -1,0 +1,32 @@
+[{
+  "_id": {
+    "$oid": "660a31aaa76b3cee60f03bc4"
+  },
+  "nombre": "Pedro",
+  "cargo": "gerente",
+  "date": "Sun Mar 31 2024 23:01:46 GMT-0500 (hora estándar de Perú)"
+},
+{
+  "_id": {
+    "$oid": "660a31aaa76b3cee60f03bc5"
+  },
+  "nombre": "Pablo",
+  "cargo": "sub-gerente",
+  "date": "Sun Mar 31 2024 23:01:46 GMT-0500 (hora estándar de Perú)"
+},
+{
+  "_id": {
+    "$oid": "660a31aaa76b3cee60f03bc6"
+  },
+  "nombre": "Andres",
+  "cargo": "jefe",
+  "date": "Sun Mar 31 2024 23:01:46 GMT-0500 (hora estándar de Perú)"
+},
+{
+  "_id": {
+    "$oid": "660a31aaa76b3cee60f03bc7"
+  },
+  "nombre": "Santiago",
+  "cargo": "supervisor",
+  "date": "Sun Mar 31 2024 23:01:46 GMT-0500 (hora estándar de Perú)"
+}]
