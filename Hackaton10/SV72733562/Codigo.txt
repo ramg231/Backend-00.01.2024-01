@@ -1,0 +1,20 @@
+db.createCollection("gestionPersonal")
+db.createCollection("Producción")
+db.createCollection("comprarInsumos_Materia")
+db.createCollection("Proveedores")
+
+db.compraInsumos_Materia.insertMany([{nombre:"madera",cantidad:100,proveedor:"dinor RC", fecha_compra:new Date("2024-03-30"), tipo:"materia"},{nombre:"tornillos",cantidad:300,proveedor:"juan",fecha_compra:new Date("2024-03-30"),tipo:"insumo"}])
+
+db.compraInsumos_Materia.updateMany({},{$set:{precio:100}})
+
+db.compraInsumos_Materia.updateOne({_id: ObjectId("66087871d34a2174b29c12ee")},{$set:{precio:300}})
+
+db.gestionPersonal.insertMany([{gestionNombre:"Nombresito",departamento:"Departamentito",cargo:"carguito"},{gestionNombre:"Nombresazo",departamento:"Departamentazo",cargo:"Cargazo"}])
+
+db.Produccion.insertMany([{nombre:"silla",materia_prima:[{materia:ObjectId("66087871d34a2174b29c12ed"),cantidad:10}],insumos:[{insumo:ObjectId("66087871d34a2174b29c12ee")}]}])
+
+db.Proveedores.insertMany([{nombreProveedor:"dinorRC",calleProveedor:"calle300",telefonoProveedor:"1234567890",emailProveedor:"dinorRC@gmail.com"},{nombreProveedor:"juan",calleProveedor:"calle690",telefonoProveedor:"0987654321",emailProveedor:"JuanCaballo@gmail.com"}])
+
+db.gestionPersonal.updateOne({_id: ObjectId("66087d32d34a2174b29c12ef")},{$set:{gestionNombre:"Personal_1", departamento:"DepartamentoPersonal_1", cargo:"Trabajador"}})
+
+db.gestionPersonal.updateOne({_id: ObjectId("66087d32d34a2174b29c12f0")},{$set:{gestionNombre:"Personal_2", departamento:"DepartamentoPersonal_2", cargo:"Trabajador"}})
