@@ -1,0 +1,283 @@
+
+//CREAR LA BASE DE DATOS
+
+use SV72227312
+
+
+//CREAR LAS COLECCIONES ("materiaPrima", "insumos", "personal", "produccion")
+
+db.createCollection("materiaPrima")
+db.createCollection("insumos")
+db.createCollection("personal")
+db.createCollection("produccion")
+
+
+//INSERTAR ELEMENTOS A "materiaPrima"
+
+db.materiaPrima.insertMany([
+  {
+    fecha_compra: "2024-03-31",
+    proveedor: "CARPINTERIA S.A.C",
+    productos: [
+      { nombre: "Madera", cantidad: 100, unidad: "metros cúbicos", precio_unitario: 50 }
+    ]
+  },
+  {
+    fecha_compra: "2024-03-31",
+    proveedor: "CARPINTERIA S.A.C",
+    productos: [
+      { nombre: "Tela", cantidad: 400, unidad: "metros", precio_unitario: 20 }
+    ]
+  },
+  {
+    fecha_compra: "2024-03-31",
+    proveedor: "CARPINTERIA S.A.C",
+    productos: [
+      { nombre: "Lana", cantidad: 30, unidad: "kilogramos", precio_unitario: 10 }
+    ]
+  },
+  {
+    fecha_compra: "2024-03-31",
+    proveedor: "CARPINTERIA S.A.C",
+    productos: [
+      { nombre: "Arcilla", cantidad: 50, unidad: "kilogramos", precio_unitario: 8 }
+    ]
+  },
+  {
+    fecha_compra: "2024-03-31",
+    proveedor: "CARPINTERIA S.A.C",
+    productos: [
+      { nombre: "Vidrio", cantidad: 10, unidad: "metros cuadrados", precio_unitario: 30 }
+    ]
+  },
+  {
+    fecha_compra: "2024-03-31",
+    proveedor: "CARPINTERIA S.A.C",
+    productos: [
+      { nombre: "Metal", cantidad: 25, unidad: "kilogramos", precio_unitario: 20 }
+    ]
+  },
+])
+
+
+//INSERTAR ELEMENTOS A "insumos"
+
+db.insumos.insertMany([
+  {
+    fecha_compra: "2024-03-31",
+    proveedor: "FERRETERIA S.A.C",
+    insumo: "Clavos",
+    cantidad: 1000,
+    unidad: "unidades",
+    precio_unitario: 0.05
+  },
+  {
+    fecha_compra: "2024-03-31",
+    proveedor: "FERRETERIA S.A.C",
+    insumo: "Tornillos",
+    cantidad: 500,
+    unidad: "unidades",
+    precio_unitario: 0.08
+  },
+  {
+    fecha_compra: "2024-03-31",
+    proveedor: "FERRETERIA S.A.C",
+    insumo: "Pegamento",
+    cantidad: 20,
+    unidad: "litros",
+    precio_unitario: 5.00
+  },
+  {
+    fecha_compra: "2024-03-31",
+    proveedor: "FERRETERIA S.A.C",
+    insumo: "Cable electrico",
+    cantidad: 50,
+    unidad: "metros",
+    precio_unitario: 12
+  },
+  {
+    fecha_compra: "2024-03-31",
+    proveedor: "FERRETERIA S.A.C",
+    insumo: "Bombillas",
+    cantidad: 50,
+    unidad: "unidades",
+    precio_unitario: 10
+  },
+  {
+    fecha_compra: "2024-03-31",
+    proveedor: "FERRETERIA S.A.C",
+    insumo: "Esmalte ceramico",
+    cantidad: 10,
+    unidad: "litros",
+    precio_unitario: 15
+  },
+  {
+    fecha_compra: "2024-03-31",
+    proveedor: "FERRETERIA S.A.C",
+    insumo: "Bisagras",
+    cantidad: 30,
+    unidad: "unidades",
+    precio_unitario: 12
+  },
+  {
+    fecha_compra: "2024-03-31",
+    proveedor: "FERRETERIA S.A.C",
+    insumo: "Algodón",
+    cantidad: 20,
+    unidad: "kilogramos",
+    precio_unitario: 10
+  },
+  {
+    fecha_compra: "2024-03-31",
+    proveedor: "FERRETERIA S.A.C",
+    insumo: "Hilo",
+    cantidad: 10,
+    unidad: "carretes",
+    precio_unitario: 10
+  },
+  {
+    fecha_compra: "2024-03-31",
+    proveedor: "FERRETERIA S.A.C",
+    insumo: "Bastidor para tejer",
+    cantidad: 5,
+    unidad: "unidades",
+    precio_unitario: 20
+  },
+  {
+    fecha_compra: "2024-03-31",
+    proveedor: "FERRETERIA S.A.C",
+    insumo: "Tijeras",
+    cantidad: 10,
+    unidad: "unidades",
+    precio_unitario: 8
+  },
+  {
+    fecha_compra: "2024-03-31",
+    proveedor: "FERRETERIA S.A.C",
+    insumo: "Pintura",
+    cantidad: 20,
+    unidad: "litros",
+    precio_unitario: 20
+  }
+])
+
+
+//ISERTAR ELEMENTOS A "personal"
+
+db.personal.insertMany([
+  {
+    nombre: "Juan Pérez",
+    cargo: "Carpintero",
+    salario: 2000,
+    fecha_contratacion: "2023-01-15"
+  },
+  {
+    nombre: "María González",
+    cargo: "Asistente de producción",
+    salario: 1500,
+    fecha_contratacion: "2023-02-10"
+  },
+  {
+    nombre: "Pedro Ramírez",
+    cargo: "Gerente de producción",
+    salario: 3000,
+    fecha_contratacion: "2022-12-01"
+  }
+  {
+    nombre: "Luis Torres",
+    cargo: "Carpintero",
+    salario: 2000,
+    fecha_contratacion: "2023-01-15"
+  },
+  {
+    nombre: "Javier Rodríguez",
+    cargo: "Técnico de mantenimiento",
+    salario: 2200,
+    fecha_contratacion: "2022-11-05"
+  },
+])
+
+
+//ACTUALIZANDO LA COLECCION "personal" DONDE SE AGREGA UN CAMPO ESTADO QUE DETERMINA SI ESTA OCUPADO O DESOCUPADO
+
+db.personal.updateMany(
+  {},
+  { $set: { estado: "desocupado" } }
+) 
+
+
+/*INSERTAR ELEMENTOS A "produccion" (Nota: En esta ocasión estamos usando el nombre del personal como identificador, pero
+para mejores practicas se debe utilizar un identificador unico que es el ObjectID)*/
+
+db.produccion.insertMany([
+  {
+    tipo_armario: "Armario",
+    cantidad_producida: 2,
+    fecha_produccion: "2024-03-31",
+    materia_prima: [
+      { nombre: "Madera", cantidad_utilizada: 10 },
+    ],
+    insumos: [
+      { nombre: "Clavos", cantidad_utilizada: 40 },
+      { nombre: "Tornillos", cantidad_utilizada: 20 },
+      { nombre: "Bisagras", cantidad_utilizada: 4 }
+    ],
+    personal: "Juan Pérez" // Asignando a Juan Pérez a esta producción
+  },
+  {
+    tipo_armario: "Marco de fotos de madera",
+    cantidad_producida: 5,
+    fecha_produccion: "2024-03-31",
+    materia_prima: [
+      { nombre: "Madera", cantidad_utilizada: 5 },
+    ],
+    insumos: [
+      { nombre: "Pintura", cantidad_utilizada: 1 },
+    ],
+    personal: "Luis Torres" // Asignando a Luis Torres a esta producción
+  }
+])
+
+
+//ACTUALIZANDO MATERIA PRIMA DESPUES DE PRODUCCION
+
+db.materiaPrima.updateOne(
+  { "productos.nombre": "Madera" }, // Filtrar por el nombre "Madera" dentro del array "productos"
+  { $inc: { "productos.$.cantidad": -15 } } // Restar 15 unidades de Madera
+)
+
+
+//ACTUALIZANDO INSUMOS DESPUES DE PRODUCCION
+
+db.insumos.updateOne(
+  { insumo: "Clavos" }, 
+  { $inc: { cantidad: -40 } }
+)
+
+db.insumos.updateOne(
+  { insumo: "Tornillos" }, 
+  { $inc: { cantidad: -20 } }
+)
+
+db.insumos.updateOne(
+  { insumo: "Bisagras" }, 
+  { $inc: { cantidad: -4 } }
+)
+
+db.insumos.updateOne(
+  { insumo: "Pintura" }, 
+  { $inc: { cantidad: -1 } }
+)
+
+
+//ACTUALIZANDO ESTADO DE PERSONAL
+
+db.personal.updateOne(
+  { nombre: "Juan Pérez" },
+  { $set: { estado: "ocupado" } }
+)
+
+db.personal.updateOne(
+  { nombre: "Luis Torres" },
+  { $set: { estado: "ocupado" } }
+)

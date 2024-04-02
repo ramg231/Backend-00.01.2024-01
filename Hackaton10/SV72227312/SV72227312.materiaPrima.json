@@ -1,0 +1,90 @@
+[{
+  "_id": {
+    "$oid": "6609a13ed33b8faddd91c0cd"
+  },
+  "fecha_compra": "2024-03-31",
+  "proveedor": "CARPINTERIA S.A.C",
+  "productos": [
+    {
+      "nombre": "Madera",
+      "cantidad": 85,
+      "unidad": "metros cúbicos",
+      "precio_unitario": 50
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "6609a13ed33b8faddd91c0ce"
+  },
+  "fecha_compra": "2024-03-31",
+  "proveedor": "CARPINTERIA S.A.C",
+  "productos": [
+    {
+      "nombre": "Tela",
+      "cantidad": 400,
+      "unidad": "metros",
+      "precio_unitario": 20
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "6609a4d8d33b8faddd91c0d6"
+  },
+  "fecha_compra": "2024-03-31",
+  "proveedor": "CARPINTERIA S.A.C",
+  "productos": [
+    {
+      "nombre": "Lana",
+      "cantidad": 30,
+      "unidad": "kilogramos",
+      "precio_unitario": 10
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "6609a4d8d33b8faddd91c0d7"
+  },
+  "fecha_compra": "2024-03-31",
+  "proveedor": "CARPINTERIA S.A.C",
+  "productos": [
+    {
+      "nombre": "Arcilla",
+      "cantidad": 50,
+      "unidad": "kilogramos",
+      "precio_unitario": 8
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "6609a4d8d33b8faddd91c0d8"
+  },
+  "fecha_compra": "2024-03-31",
+  "proveedor": "CARPINTERIA S.A.C",
+  "productos": [
+    {
+      "nombre": "Vidrio",
+      "cantidad": 10,
+      "unidad": "metros cuadrados",
+      "precio_unitario": 30
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "6609a4d8d33b8faddd91c0d9"
+  },
+  "fecha_compra": "2024-03-31",
+  "proveedor": "CARPINTERIA S.A.C",
+  "productos": [
+    {
+      "nombre": "Metal",
+      "cantidad": 25,
+      "unidad": "kilogramos",
+      "precio_unitario": 20
+    }
+  ]
+}]
