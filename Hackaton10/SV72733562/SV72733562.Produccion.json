@@ -1,0 +1,21 @@
+[{
+  "_id": {
+    "$oid": "6608866fd34a2174b29c12f1"
+  },
+  "nombre": "silla",
+  "materia_prima": [
+    {
+      "materia": {
+        "$oid": "66087871d34a2174b29c12ed"
+      },
+      "cantidad": 10
+    }
+  ],
+  "insumos": [
+    {
+      "insumo": {
+        "$oid": "66087871d34a2174b29c12ee"
+      }
+    }
+  ]
+}]

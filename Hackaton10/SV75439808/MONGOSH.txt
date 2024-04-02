@@ -1,0 +1,115 @@
+use SV75439808
+
+switched to db SV75439808
+
+db.insumos.insertOne(
+    {
+        "_id": "CMP002",
+        "date_purchase": "2024-03-30",
+        "supplier": "Supplier X",
+        "insumo": "Bisagras",
+        "quantity": 500,
+        "price_unitary": "$2",
+        "total": "$1000"
+    }
+)
+
+{
+  acknowledged: true,
+  insertedId: 'CMP002'
+}
+
+db.insumos.find({})
+
+{
+  _id: 'CMP002',
+  date_purchase: '2024-03-30',
+  supplier: 'Supplier X',
+  insumo: 'Bisagras',
+  quantity: 500,
+  price_unitary: '$2',
+  total: '$1000'
+}
+
+db.materiaPrima.insertOne(
+    {
+        "_id": "CMP001",
+        "date_puchase": "2024-03-29",
+        "supplier": "Proveedor Y",
+        "product": "Madera",
+        "quantity": 100,
+        "price_unit": "$10",
+        "total": "$1000"
+    }
+)
+
+{
+  acknowledged: true,
+  insertedId: 'CMP001'
+}
+
+db.materiaPrima.find({})
+
+{
+  _id: 'CMP001',
+  date_puchase: '2024-03-29',
+  supplier: 'Proveedor Y',
+  product: 'Madera',
+  quantity: 100,
+  price_unit: '$10',
+  total: '$1000'
+}
+
+db.personal.insertOne(
+    {
+        "_id": "EMP001",
+        "employee_name": "Juan",
+        "employee_lastname": "Peréz",
+        "employee_position": "Carpintero",
+        "departament": "Produccióm",
+        "date_hire": "2023-01-15",
+        "salary": "$2000"
+    }
+)
+
+{
+  acknowledged: true,
+  insertedId: 'EMP001'
+}
+
+db.personal.find({})
+
+{
+  _id: 'EMP001',
+  employee_name: 'Juan',
+  employee_lastname: 'Peréz',
+  employee_position: 'Carpintero',
+  departament: 'Produccióm',
+  date_hire: '2023-01-15',
+  salary: '$2000'
+}
+
+db.produccion.insertOne(
+    {
+        "_id": "PRD001",
+        "product_name": "Armario de madera",
+        "quantity_produced": 50,
+        "production_date": "2024-03-28",
+        "accountable_employee_id": "EMP001"
+    }
+)
+
+{
+  acknowledged: true,
+  insertedId: 'PRD001'
+}
+
+db.produccion.find({})
+
+{
+  _id: 'PRD001',
+  product_name: 'Armario de madera',
+  quantity_produced: 50,
+  production_date: '2024-03-28',
+  accountable_employee_id: 'EMP001'
+}

@@ -1,0 +1,168 @@
+[{
+  "_id": {
+    "$oid": "66098588d2ca6d5fae85b611"
+  },
+  "proveedor": "Proveedor A",
+  "insumo": "Adhesivos y pegamentos",
+  "cantidad": 1000,
+  "precio_unitario": 10,
+  "fecha_compra": {
+    "$date": "2024-03-30T00:00:00.000Z"
+  },
+  "usuario": "Juan Pérez",
+  "tipo_insumo": "Adhesivo de contacto",
+  "numero_factura": "FAC12345",
+  "metodo_pago": "Tarjeta de crédito",
+  "fecha_pago": {
+    "$date": "2024-03-31T00:00:00.000Z"
+  },
+  "fecha_entrega": {
+    "$date": "2024-04-02T00:00:00.000Z"
+  },
+  "estado_entrega": "Pendiente",
+  "observaciones": "Pedido urgente"
+},
+{
+  "_id": {
+    "$oid": "66098588d2ca6d5fae85b612"
+  },
+  "proveedor": "Proveedor B",
+  "insumo": "Herrajes",
+  "cantidad": 500,
+  "precio_unitario": 20,
+  "fecha_compra": {
+    "$date": "2024-03-28T00:00:00.000Z"
+  },
+  "usuario": "María Gómez",
+  "tipo_insumo": "Manijas",
+  "numero_factura": "FAC12346",
+  "metodo_pago": "Transferencia bancaria",
+  "fecha_pago": {
+    "$date": "2024-03-29T00:00:00.000Z"
+  },
+  "fecha_entrega": {
+    "$date": "2024-04-01T00:00:00.000Z"
+  },
+  "estado_entrega": "Entregado",
+  "observaciones": "Pedido mensual"
+},
+{
+  "_id": {
+    "$oid": "66098588d2ca6d5fae85b613"
+  },
+  "proveedor": "Proveedor C",
+  "insumo": "Acabados y pinturas",
+  "cantidad": 300,
+  "precio_unitario": 15,
+  "fecha_compra": {
+    "$date": "2024-03-25T00:00:00.000Z"
+  },
+  "usuario": "Pedro López",
+  "tipo_insumo": "Pintura en aerosol",
+  "numero_factura": "FAC12347",
+  "metodo_pago": "Efectivo",
+  "fecha_pago": {
+    "$date": "2024-03-25T00:00:00.000Z"
+  },
+  "fecha_entrega": {
+    "$date": "2024-03-28T00:00:00.000Z"
+  },
+  "estado_entrega": "Entregado",
+  "observaciones": "Colores variados"
+},
+{
+  "_id": {
+    "$oid": "66098588d2ca6d5fae85b614"
+  },
+  "proveedor": "Proveedor D",
+  "insumo": "Embalajes",
+  "cantidad": 200,
+  "precio_unitario": 5,
+  "fecha_compra": {
+    "$date": "2024-03-24T00:00:00.000Z"
+  },
+  "usuario": "Laura Sánchez",
+  "tipo_insumo": "Cajas de cartón",
+  "numero_factura": "FAC12348",
+  "metodo_pago": "Tarjeta de débito",
+  "fecha_pago": {
+    "$date": "2024-03-25T00:00:00.000Z"
+  },
+  "fecha_entrega": {
+    "$date": "2024-03-28T00:00:00.000Z"
+  },
+  "estado_entrega": "Entregado",
+  "observaciones": ""
+},
+{
+  "_id": {
+    "$oid": "66098588d2ca6d5fae85b615"
+  },
+  "proveedor": "Proveedor E",
+  "insumo": "Etiquetas y accesorios de marca",
+  "cantidad": 1000,
+  "precio_unitario": 2,
+  "fecha_compra": {
+    "$date": "2024-03-23T00:00:00.000Z"
+  },
+  "usuario": "Carlos González",
+  "tipo_insumo": "Etiquetas adhesivas",
+  "numero_factura": "FAC12349",
+  "metodo_pago": "Transferencia bancaria",
+  "fecha_pago": {
+    "$date": "2024-03-24T00:00:00.000Z"
+  },
+  "fecha_entrega": {
+    "$date": "2024-03-27T00:00:00.000Z"
+  },
+  "estado_entrega": "Entregado",
+  "observaciones": "Logo personalizado"
+},
+{
+  "_id": {
+    "$oid": "66098588d2ca6d5fae85b616"
+  },
+  "proveedor": "Proveedor F",
+  "insumo": "Herramientas y maquinaria",
+  "cantidad": 5,
+  "precio_unitario": 1000,
+  "fecha_compra": {
+    "$date": "2024-03-22T00:00:00.000Z"
+  },
+  "usuario": "Andrea Rodríguez",
+  "tipo_insumo": "Sierra circular",
+  "numero_factura": "FAC12350",
+  "metodo_pago": "Efectivo",
+  "fecha_pago": {
+    "$date": "2024-03-22T00:00:00.000Z"
+  },
+  "fecha_entrega": {
+    "$date": "2024-03-24T00:00:00.000Z"
+  },
+  "estado_entrega": "Entregado",
+  "observaciones": ""
+},
+{
+  "_id": {
+    "$oid": "66098588d2ca6d5fae85b617"
+  },
+  "proveedor": "Proveedor G",
+  "insumo": "Material de empaque y protección",
+  "cantidad": 100,
+  "precio_unitario": 10,
+  "fecha_compra": {
+    "$date": "2024-03-21T00:00:00.000Z"
+  },
+  "usuario": "Ana Martínez",
+  "tipo_insumo": "Burbujas de aire",
+  "numero_factura": "FAC12351",
+  "metodo_pago": "Tarjeta de crédito",
+  "fecha_pago": {
+    "$date": "2024-03-21T00:00:00.000Z"
+  },
+  "fecha_entrega": {
+    "$date": "2024-03-23T00:00:00.000Z"
+  },
+  "estado_entrega": "Entregado",
+  "observaciones": ""
+}]
