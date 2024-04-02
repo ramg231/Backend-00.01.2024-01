@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Panel</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+</head>
+
+<body class="container-sm">
+  <h2 class="text-center text-danger text-uppercase fw-bold my-2" id="lblSucursal"></h2>
+  <nav class="navbar navbar-expand-lg bg-body-tertiary">
+    <div class="container-fluid">
+      <h5 class="m-0" id="lblTecnicoLogueado"></h5>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#" id="link-realizardiagnostico">Realizar
+              Diagnóstico</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#" id="link-ticketsgenerados">Tickets Generados</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#" id="link-logout">Cerrar Sesión</a>
+          </li>
+      </div>
+    </div>
+  </nav>
+
+  <!-- <button class="btn btn-success limpieza">Limpiar</button> -->
+
+  <div class="card mt-2 py-3 visually-hidden panel pnlverificarimei">
+    <div class="card-title">
+      <h5 class="text-center text-uppercase fw-bold text-danger">Verificar IMEI</h5>
+    </div>
+    <div class="card-body">
+      <div class="d-flex align-items-end gap-2">
+        <div class="w-100">
+          <label for="txtNroIMEIConsultar" class="form-label">Ingrese el IMEI a consultar</label>
+          <input type="text" class="form-control" id="txtNroIMEIConsultar" placeholder="Ingrese el IMEI">
+        </div>
+        <div class="w-50">
+          <button id="btnBuscarIMEI" class="btn btn-info w-100"><i class="fa-solid fa-magnifying-glass"></i>
+            Buscar</button>
+        </div>
+      </div>
+      <div class="card mt-3 py-2 visually-hidden datocelular">
+        <div class="card-title m-0">
+          <h5 class="text-center text-uppercase my-2 fw-bold text-info">Datos del Celular</h5>
+        </div>
+        <div class="card-body d-flex flex-column gap-2">
+          <div class="row flex-column">
+            <div class="col">
+              <label class="fw-bold text-center w-100">Nro.IMEI</label>
+            </div>
+            <div class="col">
+              <label id="lblNroImeiConsultado" class="text-center w-100"></label>
+            </div>
+          </div>
+          <div class="row flex-column">
+            <div class="col">
+              <label class="fw-bold text-center w-100">Marca</label>
+            </div>
+            <div class="col">
+              <label class="text-center w-100" id="lblMarcaConsultado"></label>
+            </div>
+          </div>
+          <div class="row flex-column">
+            <div class="col">
+              <label class="fw-bold text-center w-100">Modelo</label>
+            </div>
+            <div class="col">
+              <label class="text-center w-100" id="lblModeloConsultado"></label>
+            </div>
+          </div>
+          <div class="row flex-column">
+            <div class="col">
+              <label class="fw-bold text-center w-100">SO</label>
+            </div>
+            <div class="col">
+              <label class="text-center w-100" id="lblSOConsultado"></label>
+            </div>
+          </div>
+          <div class="row flex-column">
+            <div class="col">
+              <label class="fw-bold text-center w-100">¿Reportado robado?</label>
+            </div>
+            <div class="col text-center">
+              <span class="badge" id="lblReportadoConsultado"></span>
+            </div>
+          </div>
+          <div class="row flex-column">
+            <div class="col">
+              <label class="fw-bold text-center w-100">Incidentes</label>
+            </div>
+            <div class="col text-center" id="lblIncidenteConsultado">
+              <p class="m-0">Ninguno</p>
+              <ol class="list-group list-group-numbered mt-2 visually-hidden"></ol>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="visually-hidden btndiagnostico">
+        <button id="btnIrADiagnosticar" class="btn btn-success w-100 mt-2"><i
+            class="fa-solid fa-mobile-screen-button"></i> Realizar Diagnóstico</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="card mt-2 py-3 visually-hidden panel pnlregistrardiagnostico">
+    <div class="card-title">
+      <h5 class="text-center text-uppercase fw-bold text-danger">Registrar Diagnóstico</h5>
+    </div>
+    <div class="card-body">
+      <form>
+        <!-- <div class="">
+          <label for="txtNroTicketRegistro" class="form-label">Nro.Ticket:</label>
+          <input type="number" class="form-control" id="txtNroTicketRegistro" placeholder="Ingrese el número de ticket">
+        </div> -->
+        <div class="mt-2">
+          <label for="txtFechaTicketRegistro" class="form-label">Fecha Registro:</label>
+          <input type="date" class="form-control" id="txtFechaTicketRegistro">
+        </div>
+        <div class="mt-2">
+          <label for="txtNroImeiRegistro" class="form-label">Nro.Imei:</label>
+          <input type="text" class="form-control" id="txtNroImeiRegistro" placeholder="Ingrese el número de IMEI">
+        </div>
+        <div class="mt-2">
+          <label for="txtDiagnosticoRegistro" class="form-label">Nro.Imei:</label>
+          <textarea class="form-control" id="txtDiagnosticoRegistro" placeholder="Ingrese el diagnóstico" rows="5"></textarea>
+        </div>
+        <div class="mt-2">
+          <button id="btnGenerarTicket" type="submit" class="btn btn-success w-100"><i class="fa-solid fa-ticket"></i> Generar Ticket</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <div class="card mt-2 py-3 visually-hidden panel pnlticketsgenerados">
+    <div class="card-title">
+      <h5 class="text-center text-uppercase fw-bold text-danger">Tickets Generados</h5>
+    </div>
+    <div class="card-body">
+      <div class="accordion" id="accordionExample">
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne"
+              aria-expanded="true" aria-controls="collapseOne">
+              Aplicar Filtros
+            </button>
+          </h2>
+          <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
+            <div class="accordion-body">
+              <div class="">
+                <label for="" class="form-label">Ingrese el IMEI</label>
+                <input type="text" class="form-control" id="txtNroImeiFiltro" placeholder="Ingrese el IMEI">
+              </div>
+              <div class="mt-2 d-flex gap-2">
+                <div class="w-100">
+                  <label for="" class="form-label">Fecha Inicio:</label>
+                  <input type="date" class="form-control" id="txtFecInicioFiltro" placeholder="">
+                </div>
+                <div class="w-100">
+                  <label for="" class="form-label">Fecha Fin:</label>
+                  <input type="date" class="form-control" id="txtFecFinFiltro" placeholder="">
+                </div>
+              </div>
+              <div class="mt-2 d-flex justify-content-end">
+                <button id="btnFiltrarTickets" class="btn btn-success"><i class="fa-solid fa-filter"></i>
+                  Filtrar</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <table class="mt-2 table table-striped table-bordered w-100 visually-hidden tblticketsgenerados">
+        <thead>
+          <tr class="table-secondary">
+            <th>Ticket</th>
+            <th>Fecha</th>
+            <th>Estado</th>
+            <th>Opc.</th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- <tr>
+            <td>3</td>
+            <td>Larry the Bird</td>
+            <td>@twitter</td>
+            <td><div class="w-100 d-flex justify-content-center gap-1"><button class="btn btn-sm btn-warning"><i class="fa-solid fa-eye"></i></button><button class="btn btn-sm btn-danger"><i class="fa-solid fa-trash"></i></button></div></td>
+          </tr> -->
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <script type="module" src="../../js/paneltecnico.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</body>
+
+</html>
