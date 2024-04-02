@@ -1,5 +1,5 @@
 const { MongoClient } = require('mongodb');
-const uri = "mongodb+srv://rpineda:vmZWbyG1oaZ29Lc3@cluster0.tya8ibb.mongodb.net/";
+const uri = "mongodb://localhost:27017";
 const client = new MongoClient(uri);
 
 async function run() {
@@ -268,17 +268,17 @@ let strIngresarMuchos = `[{
     "num_mflix_comments": 0
   }]`;
 
-// let arrInsertar = JSON.parse(strIngresarMuchos);
-// crud("sample_mflix", "movies", "agregarVarios", null, arrInsertar).then((res) => {
-//     console.log(res)
-// });
+ let arrInsertar = JSON.parse(strIngresarMuchos);
+ crud("sample_mflix", "movies", "agregarVarios", null, arrInsertar).then((res) => {
+     console.log(res)
+ });
 
 
 let filtro = { title: "White Shadows" }
 let data = { $set: { year: 1925 } }
 // crud("sample_mflix", "movies", "actualizarUno", filtro, data).then((res) => {
-//     console.log(res)
-// });
+  //   console.log(res)
+ //});
 
 // crud("sample_mflix", "movies", "actualizarVarios", filtro, data).then((res) => {
 //     console.log(res)
@@ -288,6 +288,6 @@ let data = { $set: { year: 1925 } }
 //     console.log(res)
 // });
 
-crud("sample_mflix", "movies", "borrarVarios", filtro).then((res) => {
-    console.log(res)
-});
+//crud("sample_mflix", "movies", "borrarVarios", filtro).then((res) => {
+  //  console.log(res)
+//});
