@@ -1,0 +1,39 @@
+[{
+  "_id": {
+    "$oid": "660a03d60f55eca0eb116553"
+  },
+  "Nombre": "Juan",
+  "Apellido": "Pérez",
+  "Dni": "45296824",
+  "Telefono": "968235159",
+  "Correo": "juan.perez@gmail.com",
+  "Fecha_inicio_contrato": "24-05-2022",
+  "Fecha_fin_contrato": "24-05-2023",
+  "Puesto": "Gerente de Ventas"
+},
+{
+  "_id": {
+    "$oid": "660a04590f55eca0eb116554"
+  },
+  "Nombre": "Maria",
+  "Apellido": "Solano",
+  "Dni": "45224569",
+  "Telefono": "968215234",
+  "Correo": "maria123@gmail.com",
+  "Fecha_inicio_contrato": "24-06-2022",
+  "Fecha_fin_contrato": "24-12-2023",
+  "Puesto": "Secretaria"
+},
+{
+  "_id": {
+    "$oid": "660a04b20f55eca0eb116555"
+  },
+  "Nombre": "Mario",
+  "Apellido": "Diaz",
+  "Dni": "54754569",
+  "Telefono": "968215128",
+  "Correo": "mariodiaz@gmail.com",
+  "Fecha_inicio_contrato": "15-06-2021",
+  "Fecha_fin_contrato": "15-06-2022",
+  "Puesto": "Carpintero"
+}]
