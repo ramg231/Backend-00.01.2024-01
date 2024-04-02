@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Servicio técnico</title>
+</head>
+<body>
+    
+    <h1 hidden>CLIENTES</h1>
+    <form id="clientRegister" hidden>
+        <label for="dniR">DNI:</label>
+        <input type="text" id="dniR" name="dniR" maxlength="8" required>
+        <label for="nombreR">Nombre:</label>
+        <input type="text" id="nombreR" name="nombreR" required>
+        <label for="apellidoR">Apellido:</label>
+        <input type="text" id="apellidoR" name="apellidoR" required>
+        
+        <br>
+        <br>
+        <button type="button" id="btnVerificarCliente" onclick="verificarClienteRegistrado(document.getElementById('dniR'), document.getElementById('nombreR'), document.getElementById('apellidoR'))">Verificar</button>
+        <button type="button" id="btnRegistrarCliente" onclick="registrarCliente()">Registrar</button>
+        <br>
+        <br>
+      </form>
+      <table id="tableClient" border="1" hidden> 
+        <tr>
+            <th>DNI</th>
+            <th>Nombre</th>
+            <th>Apellido</th>
+        </tr>
+    </table>
+
+    <h1>TÉCNICOS</h1>
+    <form id="formTecnico">
+        <form id="formTecnico">
+            <label for="nombreTecnico">Nombre:</label>
+            <input type="text" id="nombreTecnico" name="nombreTecnico" required><br><br>
+            
+            <label for="apellidoTecnico">Apellido:</label>
+            <input type="text" id="apellidoTecnico" name="apellidoTecnico" required><br><br>
+            
+            <label for="dniTecnico">DNI:</label>
+            <input type="text" id="dniTecnico" name="dniTecnico" maxlength="8" required><br><br>
+            
+            <label for="skillsTecnico">Skills:</label>
+            <input type="text" id="skillsTecnico" name="skillsTecnico" required><br><br>
+        
+        </form>
+        
+        <button type="button" id="btnRegistrarTecnico" onclick="registrarTecnico()">Registrar Técnico</button>
+        <br>
+        <br>
+    </form>
+
+    <table id="tableTecnic" border="1"> 
+        <tr>
+            <th>DNI</th>
+            <th>Nombre</th>
+            <th>Apellido</th>
+            <th>Skills</th>
+        </tr>
+    </table>
+
+    <h1>REGISTRAR TELEFONOS REPORTADOS</h1>
+    <form id="formPhoneReported">
+        <label for="imeiR">IMEI:</label>
+        <input type="text" id="imeiR" name="imeiR" maxlength="15" required>
+        <label for="marcaR">Marca:</label>
+        <input type="text" id="marcaR" name="marcaR" required>
+        <label for="modeloR">Modelo:</label>
+        <input type="text" id="modeloR" name="modeloR" required>
+        <br>
+        <br>
+        <button type="button" onclick="llenarDatosTelefonoReported()">Agregar teléfono reportado</button>
+        <br>
+        <br>
+      </form>
+      <table id="tablePhoneReported" border="1">
+        <tr>
+            <th>IMEI</th>
+            <th>Marca</th>
+            <th>Modelo</th>
+        </tr>
+    </table>
+
+    <h1>REPARACION DE TELEFONOS</h1>
+    <form id="formulario">
+        
+        <label for="imeiRt">IMEI:</label>
+        <input type="text" id="imeiRt" maxlength="15">
+        <button type="button" id="btnVerificarEstado" onclick="verificarEstadoImei()">Vertificar</button><br>
+        <br>
+        <label for="marcaRt">Marca:</label>
+        <input type="text" id="marcaRt" required><br>
+        <br>
+        <label for="modeloRt">Modelo:</label>
+        <input type="text" id="modeloRt" required><br>
+        <br>
+        <label for="dniRT">DNI:</label>
+        <input type="text" id="dniRT" maxlength="8">
+        <button type="button" id="btnVerificarClienteRt" onclick="verificarClienteRegistrado(document.getElementById('dniRT'), document.getElementById('nombreRT'), document.getElementById('apellidoRT'))">Verificar</button><br>
+        <br>
+        <label for="nombreRT">Nombre:</label>
+        <input type="text" id="nombreRT" required><br>
+        <br>
+        <label for="apellidoRT">Apellido:</label>
+        <input type="text" id="apellidoRT" required><br>
+        <br>
+        <label for="diagnosticoRT">Diagnostico:</label>
+        <input type="text" id="diagnosticoRT" required><br>
+        <br>
+        <button type="button" id="btnLlenarDatos" onclick="ingresarTelefono()">Ingresar telefono</button>
+        <br>
+        <br>
+    </form>
+    <h3>Para actualizar el estado del telefóno, hacer click en la fila que desee modificar.</h3>
+    <table id="tableLlenarDatos" border="1">
+        <tr>
+            <th>IMEI</th>
+            <th>Marca</th>
+            <th>Modelo</th>
+            <th>DNI</th>
+            <th>Nombre</th>
+            <th>Apellido</th>
+            <th>Diagnostico</th>
+            <th>Estado</th>
+        </tr>
+    </table>
+    <script src="js/reparacion.js"></script>
+</body>
+</html>
