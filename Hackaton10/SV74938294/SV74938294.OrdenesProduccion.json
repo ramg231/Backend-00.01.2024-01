@@ -1,0 +1,30 @@
+[{
+  "_id": {
+    "$oid": "660851c4f5fe34fc242416f5"
+  },
+  "OP": "P1",
+  "IdCliente": "12345678",
+  "IdPersonal": "A1",
+  "PrecioVenta": 200,
+  "Estado": "En proceso"
+},
+{
+  "_id": {
+    "$oid": "660851c4f5fe34fc242416f6"
+  },
+  "OP": "P2",
+  "IdCliente": "23456789",
+  "IdPersonal": "B1",
+  "PrecioVenta": 150,
+  "Estado": "En espera"
+},
+{
+  "_id": {
+    "$oid": "660851c4f5fe34fc242416f7"
+  },
+  "OP": "P3",
+  "IdCliente": "34567890",
+  "IdPersonal": "C1",
+  "PrecioVenta": 300,
+  "Estado": "Finalizada"
+}]

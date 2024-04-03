@@ -1,0 +1,39 @@
+[{
+    "_id": {
+      "$oid": "6609ac11d51bf4cea220c6bc"
+    },
+    "fecha": {
+      "$date": "2024-03-31T00:00:00.000Z"
+    },
+    "proveedor": "Madera Andina",
+    "material": "Madera",
+    "cantidad": 100,
+    "precio_unitario": 10,
+    "tipo": "materia"
+  },
+  {
+    "_id": {
+      "$oid": "6609ac11d51bf4cea220c6bd"
+    },
+    "fecha": {
+      "$date": "2024-03-30T00:00:00.000Z"
+    },
+    "proveedor": "Fierros s.a.c",
+    "material": "Metal",
+    "cantidad": 50,
+    "precio_unitario": 15,
+    "tipo": "materia"
+  },
+  {
+    "_id": {
+      "$oid": "6609ac11d51bf4cea220c6be"
+    },
+    "fecha": {
+      "$date": "2024-03-30T00:00:00.000Z"
+    },
+    "proveedor": "tekno s.a.c",
+    "insumo": "Pintura",
+    "cantidad": 20,
+    "precio_unitario": 5,
+    "tipo": "insumos"
+  }]

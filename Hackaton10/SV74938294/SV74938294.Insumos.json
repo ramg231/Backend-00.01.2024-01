@@ -1,0 +1,48 @@
+[{
+  "_id": {
+    "$oid": "6608468cf5fe34fc242416e4"
+  },
+  "id_Insumo": 1,
+  "Nombre": "Madera",
+  "Categoría": "Material",
+  "Unidad": "Metro cúbico",
+  "Costo unit": 50,
+  "Proveedor": "Proveedor A",
+  "Stock": 100
+},
+{
+  "_id": {
+    "$oid": "6608468cf5fe34fc242416e5"
+  },
+  "id_Insumo": 2,
+  "Nombre": "Clavos",
+  "Categoría": "Herramienta",
+  "Unidad": "Kilogramo",
+  "Costo unit": 10,
+  "Proveedor": "Proveedor B",
+  "Stock": 500
+},
+{
+  "_id": {
+    "$oid": "6608468cf5fe34fc242416e6"
+  },
+  "id_Insumo": 3,
+  "Nombre": "Pintura",
+  "Categoría": "Material",
+  "Unidad": "Litro",
+  "Costo unit": 20,
+  "Proveedor": "Proveedor C",
+  "Stock": 200
+},
+{
+  "_id": {
+    "$oid": "6608468cf5fe34fc242416e7"
+  },
+  "id_Insumo": 4,
+  "Nombre": "Barniz",
+  "Categoría": "Material",
+  "Unidad": "Litro",
+  "Costo unit": 30,
+  "Proveedor": "Proveedor D",
+  "Stock": 150
+}]

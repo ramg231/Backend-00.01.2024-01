@@ -1,0 +1,75 @@
+[{
+  "_id": {
+    "$oid": "660a2cfa9a9540ba5882d021"
+  },
+  "Nombre": "Luis",
+  "Apellidos": "Perez Guzman",
+  "Puesto": "Administrador",
+  "Fecha_Ingreso": {
+    "$date": "2023-01-01T05:00:00.000Z"
+  },
+  "DNI": "55555555",
+  "Fecha_Vacac": {
+    "$date": "2024-10-01T05:00:00.000Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "660a2cfa9a9540ba5882d022"
+  },
+  "Nombre": "Enrique",
+  "Apellidos": "Vidal Lagos",
+  "Puesto": "Operario",
+  "Fecha_Ingreso": {
+    "$date": "2023-01-01T05:00:00.000Z"
+  },
+  "DNI": "44444444",
+  "Fecha_Vacac": {
+    "$date": "2024-11-01T05:00:00.000Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "660a2cfa9a9540ba5882d023"
+  },
+  "Nombre": "Luisa Maria",
+  "Apellidos": "Quintana Saldaña",
+  "Puesto": "Contabilidad",
+  "Fecha_Ingreso": {
+    "$date": "2023-01-01T05:00:00.000Z"
+  },
+  "DNI": "33333333",
+  "Fecha_Vacac": {
+    "$date": "2024-09-01T05:00:00.000Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "660a2cfa9a9540ba5882d024"
+  },
+  "Nombre": "Carlos Eduardo",
+  "Apellidos": "Garcia Quiñones",
+  "Puesto": "Operario",
+  "Fecha_Ingreso": {
+    "$date": "2023-01-01T05:00:00.000Z"
+  },
+  "DNI": "22222222",
+  "Fecha_Vacac": {
+    "$date": "2024-09-01T05:00:00.000Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "660a2cfa9a9540ba5882d025"
+  },
+  "Nombre": "Jorge",
+  "Apellidos": "Castro Huaman",
+  "Puesto": "Ventas",
+  "Fecha_Ingreso": {
+    "$date": "2023-01-01T05:00:00.000Z"
+  },
+  "DNI": "11111111",
+  "Fecha_Vacac": {
+    "$date": "2024-07-01T05:00:00.000Z"
+  }
+}]

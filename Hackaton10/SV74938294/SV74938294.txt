@@ -1,0 +1,103 @@
+use SV74938294
+switched to db SV74938294
+db.createCollection("Produccion");
+db.createCollection("Personal");
+db.createCollection("Insumos");
+db.createCollection("Consumo");
+{ ok: 1 }
+var equipoCarpinteria = [
+    { DNI: "12345678", Nombres: "Juan", Apellidos: "Perez", Cargo: "Gerente" },
+    { DNI: "23456789", Nombres: "María", Apellidos: "López", Cargo: "Supervisor" },
+    { DNI: "34567890", Nombres: "Carlos", Apellidos: "González", Cargo: "Carpintero" },
+    { DNI: "45678901", Nombres: "Ana", Apellidos: "Martínez", Cargo: "Carpintero" },
+    { DNI: "56789012", Nombres: "Pedro", Apellidos: "Rodríguez", Cargo: "Ayudante" }
+];
+
+db.Personal.insertMany(equipoCarpinteria);
+
+var insumos = [
+    { id_Insumo: 1, Nombre: "Madera", Categoría: "Material", Unidad: "Metro cúbico", "Costo unit": 50, Proveedor: "Proveedor A", Stock: 100 },
+    { id_Insumo: 2, Nombre: "Clavos", Categoría: "Herramienta", Unidad: "Kilogramo", "Costo unit": 10, Proveedor: "Proveedor B", Stock: 500 },
+    { id_Insumo: 3, Nombre: "Pintura", Categoría: "Material", Unidad: "Litro", "Costo unit": 20, Proveedor: "Proveedor C", Stock: 200 },
+    { id_Insumo: 4, Nombre: "Barniz", Categoría: "Material", Unidad: "Litro", "Costo unit": 30, Proveedor: "Proveedor D", Stock: 150 }
+];
+
+db.Insumos.insertMany(insumos);
+
+var consumo = [
+    { 
+        ID_Producto: "I1", 
+        Nombre: "Mesa", 
+        Costo: 80, 
+        Precio_venta: 150, 
+        Insumos: [
+            { id_Insumo: 1, cantidad: 2 },
+            { id_Insumo: 2, cantidad: 20 },
+            { id_Insumo: 3, cantidad: 1 }
+        ]
+    },
+    { 
+        ID_Producto: "I2", 
+        Nombre: "Silla", 
+        Costo: 30, 
+        Precio_venta: 60, 
+        Insumos: [
+            { id_Insumo: 1, cantidad: 1 },
+            { id_Insumo: 2, cantidad: 10 },
+            { id_Insumo: 3, cantidad: 0.5 }
+        ]
+    },
+    { 
+        ID_Producto: "I3", 
+        Nombre: "Armario", 
+        Costo: 200, 
+        Precio_venta: 400, 
+        Insumos: [
+            { id_Insumo: 1, cantidad: 5 },
+            { id_Insumo: 2, cantidad: 50 },
+            { id_Insumo: 4, cantidad: 2 }
+        ]
+    }
+];
+
+db.Consumo.insertMany(consumo);
+
+db.createCollection("Compras")
+
+db.createCollection("Clientes")
+
+var clientes = [
+    { DNI: "12345678", Nombres: "Juan", Apellidos: "Perez" },
+    { DNI: "23456789", Nombres: "María", Apellidos: "López" },
+    { DNI: "34567890", Nombres: "Carlos", Apellidos: "González" },
+    { DNI: "45678901", Nombres: "Ana", Apellidos: "Martínez" },
+    { DNI: "56789012", Nombres: "Pedro", Apellidos: "Rodríguez" },
+    { DNI: "67890123", Nombres: "Laura", Apellidos: "Díaz" },
+    { DNI: "78901234", Nombres: "Diego", Apellidos: "Sánchez" },
+    { DNI: "89012345", Nombres: "Sofía", Apellidos: "Gómez" },
+    { DNI: "90123456", Nombres: "Elena", Apellidos: "Pérez" },
+    { DNI: "01234567", Nombres: "Miguel", Apellidos: "Fernández" }
+];
+
+db.Clientes.insertMany(clientes);
+
+db.createCollection("OrdenesProduccion")
+
+db.createCollection("DetalleOP")
+
+
+db.OrdenesProduccion.insertMany([
+    { OP: "P1", IdCliente: "12345678", IdPersonal: "A1", PrecioVenta: 200, Estado: "En proceso" },
+    { OP: "P2", IdCliente: "23456789", IdPersonal: "B1", PrecioVenta: 150, Estado: "En espera" },
+    { OP: "P3", IdCliente: "34567890", IdPersonal: "C1", PrecioVenta: 300, Estado: "Finalizada" }
+]);
+
+
+db.DetalleOP.insertMany([
+    { IdDetalle: "D1", NumeroOrden: "P1", IdProducto: "1", Cantidad: 10 },
+    { IdDetalle: "D2", NumeroOrden: "P1", IdProducto: "2", Cantidad: 20 },
+    { IdDetalle: "D3", NumeroOrden: "P2", IdProducto: "3", Cantidad: 15 },
+    { IdDetalle: "D4", NumeroOrden: "P2", IdProducto: "4", Cantidad: 25 },
+    { IdDetalle: "D5", NumeroOrden: "P3", IdProducto: "1", Cantidad: 12 },
+    { IdDetalle: "D6", NumeroOrden: "P3", IdProducto: "3", Cantidad: 18 }
+]);

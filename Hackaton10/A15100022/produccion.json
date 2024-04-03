@@ -1,0 +1,280 @@
+[{
+  "_id": {
+    "$oid": "66098b13d2ca6d5fae85b626"
+  },
+  "producto": "Mesa de madera",
+  "material": "Madera",
+  "cantidad_producida": 50,
+  "fecha_produccion": {
+    "$date": "2024-03-15T00:00:00.000Z"
+  },
+  "tiempo_produccion_horas": 100,
+  "recursos_utilizados": [
+    "Madera",
+    "Clavos",
+    "Pegamento"
+  ],
+  "insumos_utilizados": [
+    {
+      "insumo": "Madera",
+      "cantidad": 100
+    },
+    {
+      "insumo": "Clavos",
+      "cantidad": 200
+    },
+    {
+      "insumo": "Pegamento",
+      "cantidad": 2
+    }
+  ],
+  "responsable": "Juan Pérez",
+  "costo_total": 3000,
+  "estado": "Terminado",
+  "comentarios": "Producto de alta calidad"
+},
+{
+  "_id": {
+    "$oid": "66098b13d2ca6d5fae85b627"
+  },
+  "producto": "Silla de madera",
+  "material": "Madera",
+  "cantidad_producida": 100,
+  "fecha_produccion": {
+    "$date": "2024-03-20T00:00:00.000Z"
+  },
+  "tiempo_produccion_horas": 80,
+  "recursos_utilizados": [
+    "Madera",
+    "Clavos",
+    "Pegamento"
+  ],
+  "insumos_utilizados": [
+    {
+      "insumo": "Madera",
+      "cantidad": 50
+    },
+    {
+      "insumo": "Clavos",
+      "cantidad": 150
+    },
+    {
+      "insumo": "Pegamento",
+      "cantidad": 1
+    }
+  ],
+  "responsable": "María Gómez",
+  "costo_total": 2000,
+  "estado": "Terminado",
+  "comentarios": "Buen rendimiento en pruebas de calidad"
+},
+{
+  "_id": {
+    "$oid": "66098b13d2ca6d5fae85b628"
+  },
+  "producto": "Estante de madera",
+  "material": "Madera",
+  "cantidad_producida": 30,
+  "fecha_produccion": {
+    "$date": "2024-03-25T00:00:00.000Z"
+  },
+  "tiempo_produccion_horas": 120,
+  "recursos_utilizados": [
+    "Madera",
+    "Clavos",
+    "Pegamento"
+  ],
+  "insumos_utilizados": [
+    {
+      "insumo": "Madera",
+      "cantidad": 60
+    },
+    {
+      "insumo": "Clavos",
+      "cantidad": 100
+    },
+    {
+      "insumo": "Pegamento",
+      "cantidad": 1
+    }
+  ],
+  "responsable": "Pedro López",
+  "costo_total": 1500,
+  "estado": "Terminado",
+  "comentarios": "Amplio espacio de almacenamiento"
+},
+{
+  "_id": {
+    "$oid": "66098b13d2ca6d5fae85b629"
+  },
+  "producto": "Escritorio de madera",
+  "material": "Madera",
+  "cantidad_producida": 25,
+  "fecha_produccion": {
+    "$date": "2024-03-30T00:00:00.000Z"
+  },
+  "tiempo_produccion_horas": 150,
+  "recursos_utilizados": [
+    "Madera",
+    "Clavos",
+    "Pegamento"
+  ],
+  "insumos_utilizados": [
+    {
+      "insumo": "Madera",
+      "cantidad": 50
+    },
+    {
+      "insumo": "Clavos",
+      "cantidad": 100
+    },
+    {
+      "insumo": "Pegamento",
+      "cantidad": 2
+    }
+  ],
+  "responsable": "Ana Martínez",
+  "costo_total": 3500,
+  "estado": "Terminado",
+  "comentarios": "Diseño moderno"
+},
+{
+  "_id": {
+    "$oid": "66098b13d2ca6d5fae85b62a"
+  },
+  "producto": "Cama de madera",
+  "material": "Madera",
+  "cantidad_producida": 15,
+  "fecha_produccion": {
+    "$date": "2024-04-05T00:00:00.000Z"
+  },
+  "tiempo_produccion_horas": 200,
+  "recursos_utilizados": [
+    "Madera",
+    "Clavos",
+    "Pegamento"
+  ],
+  "insumos_utilizados": [
+    {
+      "insumo": "Madera",
+      "cantidad": 40
+    },
+    {
+      "insumo": "Clavos",
+      "cantidad": 80
+    },
+    {
+      "insumo": "Pegamento",
+      "cantidad": 3
+    }
+  ],
+  "responsable": "Carlos González",
+  "costo_total": 2800,
+  "estado": "En proceso",
+  "comentarios": "Detalles de acabado pendientes"
+},
+{
+  "_id": {
+    "$oid": "66098b13d2ca6d5fae85b62b"
+  },
+  "producto": "Mesa auxiliar de madera",
+  "material": "Madera",
+  "cantidad_producida": 50,
+  "fecha_produccion": {
+    "$date": "2024-04-10T00:00:00.000Z"
+  },
+  "tiempo_produccion_horas": 120,
+  "recursos_utilizados": [
+    "Madera",
+    "Clavos",
+    "Pegamento"
+  ],
+  "insumos_utilizados": [
+    {
+      "insumo": "Madera",
+      "cantidad": 30
+    },
+    {
+      "insumo": "Clavos",
+      "cantidad": 80
+    },
+    {
+      "insumo": "Pegamento",
+      "cantidad": 1
+    }
+  ],
+  "responsable": "Laura Sánchez",
+  "costo_total": 1800,
+  "estado": "Terminado",
+  "comentarios": "Compacta y funcional"
+},
+{
+  "_id": {
+    "$oid": "66098b13d2ca6d5fae85b62c"
+  },
+  "producto": "Armario de madera",
+  "material": "Madera",
+  "cantidad_producida": 10,
+  "fecha_produccion": {
+    "$date": "2024-04-15T00:00:00.000Z"
+  },
+  "tiempo_produccion_horas": 180,
+  "recursos_utilizados": [
+    "Madera",
+    "Clavos",
+    "Pegamento"
+  ],
+  "insumos_utilizados": [
+    {
+      "insumo": "Madera",
+      "cantidad": 20
+    },
+    {
+      "insumo": "Clavos",
+      "cantidad": 50
+    },
+    {
+      "insumo": "Pegamento",
+      "cantidad": 2
+    }
+  ],
+  "responsable": "Juan Pérez",
+  "costo_total": 4000,
+  "estado": "En proceso",
+  "comentarios": "Dimensiones personalizadas"
+},
+{
+  "_id": {
+    "$oid": "66098b13d2ca6d5fae85b62d"
+  },
+  "producto": "Mesa de centro de madera",
+  "material": "Madera",
+  "cantidad_producida": 30,
+  "fecha_produccion": {
+    "$date": "2024-04-20T00:00:00.000Z"
+  },
+  "tiempo_produccion_horas": 100,
+  "recursos_utilizados": [
+    "Madera",
+    "Clavos",
+    "Pegamento"
+  ],
+  "insumos_utilizados": [
+    {
+      "insumo": "Madera",
+      "cantidad": 40
+    },
+    {
+      "insumo": "Clavos",
+      "cantidad": 60
+    },
+    {
+      "insumo": "Pegamento",
+      "cantidad": 1
+    }
+  ],
+  "responsable": "María Gómez",
+  "costo_total": 2500,
+  "estado": "Terminado",
+  "comentarios": "Estilo rústico"
+}]
