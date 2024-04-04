@@ -1,6 +1,7 @@
 {
-  "name": "d19423",
+  "name": "sv75439808",
   "version": "1.0.0",
+  "description": "",
   "main": "index.js",
   "scripts": {
     "dev": "nodemon index.js",
@@ -12,6 +13,5 @@
   "dependencies": {
     "mongodb": "^6.5.0",
     "nodemon": "^3.1.0"
-  },
-  "description": ""
+  }
 }

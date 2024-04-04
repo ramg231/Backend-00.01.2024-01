@@ -1,0 +1,176 @@
+use a15100022
+db.createCollection("compra_materia_prima")
+db.createCollection("compra_insumos")
+db.createCollection("gestion_personal")
+db.createCollection("produccion")
+
+
+db.compra_materia_prima.insertMany([
+    {
+        proveedor: "Proveedor A",
+        materia_prima: "Madera",
+        cantidad: 1000,
+        precio_unitario: 50,
+        fecha_compra: new Date("2024-03-30"),
+        usuario: "Juan Perez", // Nombre del usuario que realizó la compra
+        tipo_mueble: "Silla", // Tipo de mueble para el que se utilizará la materia prima
+        numero_factura: "FAC12345", // Número de factura de la compra
+        metodo_pago: "Tarjeta de crédito", // Método de pago utilizado
+        fecha_pago: new Date("2024-03-31"), // Fecha en que se realizó el pago
+        fecha_entrega: new Date("2024-04-02"), // Fecha de entrega esperada
+        estado_entrega: "Pendiente", // Estado de la entrega
+        observaciones: "Entrega urgente solicitada" // Observaciones adicionales
+        // Otros campos relacionados, si es necesario
+    },
+])
+
+db.compra_materia_prima.insertOne({
+    proveedor: "Proveedor G",
+    materia_prima: "Tableros de MDF",
+    cantidad: 700,
+    precio_unitario: 25,
+    fecha_compra: new Date("2024-03-24"),
+    usuario: "Andrea Rodríguez", 
+    tipo_mueble: "Mesa", 
+    numero_factura: "FAC12351", 
+    metodo_pago: "Tarjeta de crédito", 
+    fecha_pago: new Date("2024-03-25"), 
+    fecha_entrega: new Date("2024-03-28"), 
+    estado_entrega: "Entregado", 
+    observaciones: "Espesor de 15mm"
+})
+
+
+
+
+Adhesivos y pegamento
+Herrajes 
+Acabados y pinturas 
+Embalajes 
+Etiquetas y accesorios de marca
+Herramientas y maquinaria 
+Material de empaque y protección
+db.compra_insumos.insertMany([
+    {
+        proveedor: "Proveedor A",
+        insumo: "Adhesivos y pegamentos",
+        cantidad: 1000,
+        precio_unitario: 10,
+        fecha_compra: new Date("2024-03-30"),
+        usuario: "Juan Pérez",
+        tipo_insumo: "Adhesivo de contacto",
+        numero_factura: "FAC12345",
+        metodo_pago: "Tarjeta de crédito",
+        fecha_pago: new Date("2024-03-31"),
+        fecha_entrega: new Date("2024-04-02"),
+        estado_entrega: "Pendiente",
+        observaciones: "Pedido urgente"
+    },
+    {
+        proveedor: "Proveedor B",
+        insumo: "Herrajes",
+        cantidad: 500,
+        precio_unitario: 20,
+        fecha_compra: new Date("2024-03-28"),
+        usuario: "María Gómez",
+        tipo_insumo: "Manijas",
+        numero_factura: "FAC12346",
+        metodo_pago: "Transferencia bancaria",
+        fecha_pago: new Date("2024-03-29"),
+        fecha_entrega: new Date("2024-04-01"),
+        estado_entrega: "Entregado",
+        observaciones: "Pedido mensual"
+    }
+    ])
+
+ Aquí podrías mantener información sobre el personal de la empresa,
+ incluyendo datos como el nombre, cargo, departamento, salario, fecha de contratación, etc.
+
+    db.gestion_personal.insertMany([
+    {
+        nombre: "Juan Pérez",
+        cargo: "Diseñador de muebles",
+        departamento: "Diseño",
+        salario: 3000,
+        fecha_contratacion: new Date("2023-05-15"),
+        direccion: "Av. Principal #123",
+        telefono: "123-456-7890",
+        correo_electronico: "juan.perez@example.com",
+        // Otros campos relacionados, si es necesario
+    },
+    {
+        nombre: "María Gómez",
+        cargo: "Operario de producción",
+        departamento: "Producción",
+        salario: 2500,
+        fecha_contratacion: new Date("2023-07-20"),
+        direccion: "Calle Secundaria #456",
+        telefono: "987-654-3210",
+        correo_electronico: "maria.gomez@example.com",
+        // Otros campos relacionados, si es necesario
+    }
+    ])
+
+Esta colección podría contener datos relacionados con la producción de la empresa, como los productos fabricados,
+ la cantidad producida, los tiempos de producción, los recursos utilizados, etc
+ db.produccion.insertMany([
+    {
+        producto: "Mesa de madera",
+        material: "Madera",
+        cantidad_producida: 50,
+        fecha_produccion: new Date("2024-03-15"),
+        tiempo_produccion_horas: 100,
+        recursos_utilizados: ["Madera", "Clavos", "Pegamento"],
+        insumos_utilizados: [
+            { insumo: "Madera", cantidad: 100 },
+            { insumo: "Clavos", cantidad: 200 },
+            { insumo: "Pegamento", cantidad: 2 }
+        ],
+        responsable: "Juan Pérez",
+        costo_total: 3000,
+        estado: "Terminado",
+        comentarios: "Producto de alta calidad"
+    },
+    {
+        producto: "Silla de madera",
+        material: "Madera",
+        cantidad_producida: 100,
+        fecha_produccion: new Date("2024-03-20"),
+        tiempo_produccion_horas: 80,
+        recursos_utilizados: ["Madera", "Clavos", "Pegamento"],
+        insumos_utilizados: [
+            { insumo: "Madera", cantidad: 50 },
+            { insumo: "Clavos", cantidad: 150 },
+            { insumo: "Pegamento", cantidad: 1 }
+        ],
+        responsable: "María Gómez",
+        costo_total: 2000,
+        estado: "Terminado",
+        comentarios: "Buen rendimiento en pruebas de calidad"
+    }
+])
+
+Algunas consultas 
+
+1.Para obtener todos los productos fabricados con un material específico.
+
+db.produccion.find({ material: "Madera" })
+
+2.Para obtener todos los productos que aún están en proceso de producción:
+
+db.produccion.find({ estado: "En proceso" })
+
+3.Para obtener todos los productos producidos en una fecha específica o dentro de un rango de fechas
+ Productos producidos en una fecha específica ejemplo: 15 de marzo de 2024
+db.produccion.find({ fecha_produccion: { $eq: new Date("2024-03-15") } })
+
+ Productos producidos dentro de un rango de fechas ejemplo entre el 1 de abril y el 10 de abril de 2024
+db.produccion.find({ fecha_produccion: { $gte: new Date("2024-04-01"), $lte: new Date("2024-04-10") } })
+
+4.Para obtener todos los productos producidos por un responsable específico, por ejemplo, "Juan Pérez":
+
+db.produccion.find({ responsable: "Juan Pérez" })
+
+5.Para obtener los insumos utilizados en la producción de un producto específico, por ejemplo, "Mesa de madera":
+
+db.produccion.findOne({ producto: "Mesa de madera" }, { _id: 0, insumos_utilizados:1 })

@@ -1,0 +1,40 @@
+[{
+  "_id": {
+    "$oid": "660a2111a76b3cee60f03bb3"
+  },
+  "title": "Pegamento",
+  "unidad": "Galones",
+  "cantidad": 5,
+  "precio": 1,
+  "date": "Sun Mar 31 2024 21:50:57 GMT-0500 (hora estándar de Perú)"
+},
+{
+  "_id": {
+    "$oid": "660a24aea76b3cee60f03bb8"
+  },
+  "title": "Pintura",
+  "unidad": "Galones",
+  "cantidad": 5,
+  "precio": 1,
+  "date": "Sun Mar 31 2024 22:06:22 GMT-0500 (hora estándar de Perú)"
+},
+{
+  "_id": {
+    "$oid": "660a24aea76b3cee60f03bb9"
+  },
+  "title": "Clavos",
+  "unidad": "Kilos",
+  "cantidad": 5,
+  "precio": 1,
+  "date": "Sun Mar 31 2024 22:06:22 GMT-0500 (hora estándar de Perú)"
+},
+{
+  "_id": {
+    "$oid": "660a24aea76b3cee60f03bbb"
+  },
+  "title": "Barniz",
+  "unidad": "Galones",
+  "cantidad": 5,
+  "precio": 1,
+  "date": "Sun Mar 31 2024 22:06:22 GMT-0500 (hora estándar de Perú)"
+}]

@@ -1,0 +1,24 @@
+[{
+  "_id": {
+    "$oid": "660b078f9da1f86f61e9bd04"
+  },
+  "nombre": "seleccion de materia prima",
+  "cantidad": 100,
+  "proveedor": "dinor RC",
+  "fecha_compra": {
+    "$date": "2024-03-30T00:00:00.000Z"
+  },
+  "tipo": "corte y dimensiones"
+},
+{
+  "_id": {
+    "$oid": "660b078f9da1f86f61e9bd05"
+  },
+  "nombre": "ensamblaje",
+  "cantidad": 300,
+  "proveedor": "jose",
+  "fecha_compra": {
+    "$date": "2024-03-30T00:00:00.000Z"
+  },
+  "tipo": "acabado"
+}]
