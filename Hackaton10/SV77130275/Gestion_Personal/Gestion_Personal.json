@@ -1,0 +1,60 @@
+[{
+    "_id": {
+      "$oid": "660e28d7c6704fa5a6309dda"
+    },
+    "Nombre": "Maritza",
+    "Apellido": "Chambi",
+    "Sexo": "F",
+    "ID_Empleado": 1,
+    "Cargo": "Jefa de Empresa"
+  },
+  {
+    "_id": {
+      "$oid": "660e28d7c6704fa5a6309ddb"
+    },
+    "Nombre": "Jonathan",
+    "Apellido": "Pacompia",
+    "Sexo": "M",
+    "ID_Empleado": 2,
+    "Cargo": "Jefe de Produccion"
+  },
+  {
+    "_id": {
+      "$oid": "660e28d7c6704fa5a6309ddc"
+    },
+    "Nombre": "Sammy",
+    "Apellido": "Cabalier",
+    "Sexo": "F",
+    "ID_Empleado": 3,
+    "Cargo": "Tec. Produccion"
+  },
+  {
+    "_id": {
+      "$oid": "660e28d7c6704fa5a6309ddd"
+    },
+    "Nombre": "Scooby",
+    "Apellido": "Marchs",
+    "Sexo": "M",
+    "ID_Empleado": 4,
+    "Cargo": "Tec. Produccion"
+  },
+  {
+    "_id": {
+      "$oid": "660e28d7c6704fa5a6309dde"
+    },
+    "Nombre": "Cala",
+    "Apellido": "Alcazar",
+    "Sexo": "F",
+    "ID_Empleado": 5,
+    "Cargo": "Tec. Produccion"
+  },
+  {
+    "_id": {
+      "$oid": "660e28d7c6704fa5a6309ddf"
+    },
+    "Nombre": "Stiven",
+    "Apellido": "ReddGer",
+    "Sexo": "M",
+    "ID_Empleado": 6,
+    "Cargo": "Control de Calidad"
+  }]
