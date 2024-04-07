@@ -1,33 +1,36 @@
 const dbConfig = require("../config/db.config.js");
 const Sequelize = require("sequelize");
-// const sequelize = new Sequelize(dbConfig.DB, dbConfig.USER, dbConfig.PASSWORD, {
-//     host: dbConfig.HOST,
-//     dialect: dbConfig.dialect,
-//     operatorsAliases: false,
+
+/*const sequelize = new Sequelize(dbConfig.DB, dbConfig.USER, dbConfig.PASSWORD, {
+    host: dbConfig.HOST,
+    dialect: dbConfig.dialect,
+    operatorsAliases: false,
   
-//     // pool: {
-//     //   max: dbConfig.pool.max,
-//     //   min: dbConfig.pool.min,
-//     //   acquire: dbConfig.pool.acquire,
-//     //   idle: dbConfig.pool.idle
-//     // }
-//   });
+    pool: {
+      max: dbConfig.pool.max,
+      min: dbConfig.pool.min,
+      acquire: dbConfig.pool.acquire,
+      idle: dbConfig.pool.idle
+    }
+  });*/
 
-const sequelize = new Sequelize("postgres://pacha2024:pacha2024@localhost/back202401", {
-  dialect: 'postgres'
-  // anything else you want to pass
-})
+const sequelize = new Sequelize('Prueba2', 'root', '12345', {
+    host: 'localhost',
+    dialect: 'mysql', 
+  });
 
-  const db = {};
+const db = {};
 
 db.Sequelize = Sequelize;
 db.sequelize = sequelize;
+
 db.tutorials = require("./tutorial.model.js")(sequelize, Sequelize);
 db.comments = require("./comment.model.js")(sequelize, Sequelize);
 db.tag = require("./tag.model.js")(sequelize, Sequelize);
 
-
+//RELACIONES DE TABLAS
 db.tutorials.hasMany(db.comments, { as: "comments" });
+
 db.comments.belongsTo(db.tutorials, {
   foreignKey: "tutorialId",
   as: "tutorial",
@@ -39,10 +42,11 @@ db.tag.belongsToMany(db.tutorials, {
     as: "tutorials",
     foreignKey: "tag_id",
   });
-  db.tutorials.belongsToMany(db.tag, {
+
+db.tutorials.belongsToMany(db.tag, {
     through: "tutorial_tag",
     as: "tags",
     foreignKey: "tutorial_id",
   });
   
-  module.exports = db;
+module.exports = db;

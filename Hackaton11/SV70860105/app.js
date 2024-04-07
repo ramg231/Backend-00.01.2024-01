@@ -32,9 +32,9 @@ app.get("/", (req, res) => {
 
 
 
-require("./app/routes/tutorial.routes")(app);
+require("./app/routes/routes")(app);
 
-const PORT = process.env.PORT || 8000;
+const PORT = process.env.PORT || 8080;
 app.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}.`);
 });
