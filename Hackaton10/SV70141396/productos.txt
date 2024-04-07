@@ -1,0 +1,314 @@
+db.createCollection("Gestion de Personal")
+{ ok: 1 }
+use SV70141396
+switched to db SV70141396
+db.createCollection("Gestion de Personal")
+{ ok: 1 }
+db.createCollection("Produccion")
+{ ok: 1 }
+
+
+db.Compradeinsumos.insertMany({
+  title: "Pintura",
+  unidad: "Galones",
+  cantidad: 5,
+  precio: 1,
+  date: Date()
+})
+MongoInvalidArgumentError: Argument "docs" must be an array of documents
+db.Compradeinsumos.insertMany([
+{
+  title: "Pintura",
+  unidad: "Galones",
+  cantidad: 5,
+  precio: 1,
+  date: Date()
+},
+{
+  title: "Clavos",
+  unidad: "Galones",
+  cantidad: 5,
+  precio: 1,
+  date: Date()
+},
+
+db.posts.insertMany([  
+  {
+    title: "Pintura",
+  	unidad: "Galones",
+  	cantidad: 5,
+  	precio: 1,
+  	date: Date()
+  },
+  {
+    title: "Clavos",
+  	unidad: "Kilos",
+  	cantidad: 5,
+  	precio: 1,
+  	date: Date()
+  },
+  { 
+		title: "Clavos",
+  	unidad: "Galones",
+  	cantidad: 5,
+  	precio: 1,
+  	date: Date()
+  },
+  { 
+		title: "Barniz",
+  	unidad: "Galones",
+  	cantidad: 5,
+  	precio: 1,
+  	date: Date()
+  }
+])
+{
+  acknowledged: true,
+  insertedIds: {
+    '0': ObjectId('660a2445a76b3cee60f03bb4'),
+    '1': ObjectId('660a2445a76b3cee60f03bb5'),
+    '2': ObjectId('660a2445a76b3cee60f03bb6'),
+    '3': ObjectId('660a2445a76b3cee60f03bb7')
+  }
+}
+db.Compradeinsumos.insertMany([  
+  {
+    title: "Pintura",
+  	unidad: "Galones",
+  	cantidad: 5,
+  	precio: 1,
+  	date: Date()
+  },
+  {
+    title: "Clavos",
+  	unidad: "Kilos",
+  	cantidad: 5,
+  	precio: 1,
+  	date: Date()
+  },
+  { 
+		title: "Clavos",
+  	unidad: "Galones",
+  	cantidad: 5,
+  	precio: 1,
+  	date: Date()
+  },
+  { 
+		title: "Barniz",
+  	unidad: "Galones",
+  	cantidad: 5,
+  	precio: 1,
+  	date: Date()
+  }
+])
+{
+  acknowledged: true,
+  insertedIds: {
+    '0': ObjectId('660a24aea76b3cee60f03bb8'),
+    '1': ObjectId('660a24aea76b3cee60f03bb9'),
+    '2': ObjectId('660a24aea76b3cee60f03bba'),
+    '3': ObjectId('660a24aea76b3cee60f03bbb')
+  }
+}
+db.Gestion_de_Personal.findOne()
+null
+db.Gestion de Personal.findOne()
+SyntaxError: Missing semicolon. (1:10)
+
+> 1 | db.Gestion de Personal.findOne()
+    |           ^
+db.Gestion.de.Personal.findOne()
+null
+db.GestiondePersonal.findOne()
+null
+db.Compradeinsumos.deleteOne({ ObjectId: '660a24aea76b3cee60f03bba' })
+{
+  acknowledged: true,
+  deletedCount: 0
+}
+db.Compradeinsumos.deleteOne({ _id: ObjectId('660a24aea76b3cee60f03bba') })
+{
+  acknowledged: true,
+  deletedCount: 1
+}
+db.createCollection("GestiondePersonal")
+{ ok: 1 }
+db.createCollection("CompradeMateriaPrima")
+{ ok: 1 }
+db.CompradeMateriaPrima.insertMany([  
+  {
+    title: "MateriaP1",
+  	unidad: "Metros",
+  	cantidad: 5,
+  	precio: 1,
+  	date: Date()
+  },
+  {
+    title: "MateriaP2",
+  	unidad: "Metros",
+  	cantidad: 5,
+  	precio: 1,
+  	date: Date()
+  },
+  { 
+		title: "MateriaP3",
+  	unidad: "Metros",
+  	cantidad: 5,
+  	precio: 1,
+  	date: Date()
+  },
+  { 
+		title: "MateriaP4",
+  	unidad: "Metros",
+  	cantidad: 5,
+  	precio: 1,
+  	date: Date()
+  }
+])
+{
+  acknowledged: true,
+  insertedIds: {
+    '0': ObjectId('660a2e9ba76b3cee60f03bbc'),
+    '1': ObjectId('660a2e9ba76b3cee60f03bbd'),
+    '2': ObjectId('660a2e9ba76b3cee60f03bbe'),
+    '3': ObjectId('660a2e9ba76b3cee60f03bbf')
+  }
+}
+db.GestiondePersonal.insertMany([  
+  {
+    nombre: "Pedro",
+  	cargo: "gerente",  	date: Date()
+  },
+  {
+    title: "MateriaP2",
+  	unidad: "Metros",
+  	cantidad: 5,
+  	precio: 1,
+  	date: Date()
+  },
+  { 
+		title: "MateriaP3",
+  	unidad: "Metros",
+  	cantidad: 5,
+  	precio: 1,
+  	date: Date()
+  },
+  { 
+		title: "MateriaP4",
+  	unidad: "Metros",
+  	cantidad: 5,
+  	precio: 1,
+  	date: Date()
+  }
+])
+{
+  acknowledged: true,
+  insertedIds: {
+    '0': ObjectId('660a2fffa76b3cee60f03bc0'),
+    '1': ObjectId('660a2fffa76b3cee60f03bc1'),
+    '2': ObjectId('660a2fffa76b3cee60f03bc2'),
+    '3': ObjectId('660a2fffa76b3cee60f03bc3')
+  }
+}
+db.createCollection("GestiondePersonal")
+{ ok: 1 }
+db.GestiondePersonal.insertMany([  
+  {
+    nombre: "Pedro",
+  	cargo: "gerente",  	
+		date: Date()
+  },
+  {
+    nombre: "Pablo",
+  	cargo: "sub-gerente",
+  	date: Date()
+  },
+  {
+    nombre: "Andres",
+  	cargo: "jefe",
+  	date: Date()
+  },
+  {
+    nombre: "Santiago",
+  	cargo: "supervisor",
+  	date: Date()
+  },
+])
+{
+  acknowledged: true,
+  insertedIds: {
+    '0': ObjectId('660a31aaa76b3cee60f03bc4'),
+    '1': ObjectId('660a31aaa76b3cee60f03bc5'),
+    '2': ObjectId('660a31aaa76b3cee60f03bc6'),
+    '3': ObjectId('660a31aaa76b3cee60f03bc7')
+  }
+}
+
+  {
+    $addFields: {
+      sueldo: 1100
+    }
+  },
+])
+{
+  _id: ObjectId('660a31aaa76b3cee60f03bc4'),
+  nombre: 'Pedro',
+  cargo: 'gerente',
+  date: 'Sun Mar 31 2024 23:01:46 GMT-0500 (hora estándar de Perú)',
+  sueldo: 1100
+}
+{
+  _id: ObjectId('660a31aaa76b3cee60f03bc5'),
+  nombre: 'Pablo',
+  cargo: 'sub-gerente',
+  date: 'Sun Mar 31 2024 23:01:46 GMT-0500 (hora estándar de Perú)',
+  sueldo: 1100
+}
+{
+  _id: ObjectId('660a31aaa76b3cee60f03bc6'),
+  nombre: 'Andres',
+  cargo: 'jefe',
+  date: 'Sun Mar 31 2024 23:01:46 GMT-0500 (hora estándar de Perú)',
+  sueldo: 1100
+}
+{
+  _id: ObjectId('660a31aaa76b3cee60f03bc7'),
+  nombre: 'Santiago',
+  cargo: 'supervisor',
+  date: 'Sun Mar 31 2024 23:01:46 GMT-0500 (hora estándar de Perú)',
+  sueldo: 1100
+}
+db.Produccion.insertMany([  
+  {
+    producto: "1",
+  	unidadesaproducir: 1,  	
+		date: Date()
+  },
+  {
+    producto: "2",
+  	unidadesaproducir: 23,
+  	date: Date()
+  },
+  {
+    producto: "3",
+  	unidadesaproducir: 20,
+  	date: Date()
+  },
+  {
+    producto: "4",
+  	unidadesaproducir: 16,
+  	date: Date()
+  },
+])
+{
+  acknowledged: true,
+  insertedIds: {
+    '0': ObjectId('660a342ca76b3cee60f03bc8'),
+    '1': ObjectId('660a342ca76b3cee60f03bc9'),
+    '2': ObjectId('660a342ca76b3cee60f03bca'),
+    '3': ObjectId('660a342ca76b3cee60f03bcb')
+  }
+}
+SV70141396
+Selection deleted
+

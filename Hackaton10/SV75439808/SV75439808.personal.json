@@ -1,0 +1,9 @@
+[{
+  "_id": "EMP001",
+  "employee_name": "Juan",
+  "employee_lastname": "Peréz",
+  "employee_position": "Carpintero",
+  "departament": "Produccióm",
+  "date_hire": "2023-01-15",
+  "salary": "$2000"
+}]

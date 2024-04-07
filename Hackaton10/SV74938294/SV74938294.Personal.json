@@ -1,0 +1,45 @@
+[{
+  "_id": {
+    "$oid": "66084552f5fe34fc242416df"
+  },
+  "DNI": "12345678",
+  "Nombres": "Juan",
+  "Apellidos": "Perez",
+  "Cargo": "Gerente"
+},
+{
+  "_id": {
+    "$oid": "66084552f5fe34fc242416e0"
+  },
+  "DNI": "23456789",
+  "Nombres": "María",
+  "Apellidos": "López",
+  "Cargo": "Supervisor"
+},
+{
+  "_id": {
+    "$oid": "66084552f5fe34fc242416e1"
+  },
+  "DNI": "34567890",
+  "Nombres": "Carlos",
+  "Apellidos": "González",
+  "Cargo": "Carpintero"
+},
+{
+  "_id": {
+    "$oid": "66084552f5fe34fc242416e2"
+  },
+  "DNI": "45678901",
+  "Nombres": "Ana",
+  "Apellidos": "Martínez",
+  "Cargo": "Carpintero"
+},
+{
+  "_id": {
+    "$oid": "66084552f5fe34fc242416e3"
+  },
+  "DNI": "56789012",
+  "Nombres": "Pedro",
+  "Apellidos": "Rodríguez",
+  "Cargo": "Ayudante"
+}]

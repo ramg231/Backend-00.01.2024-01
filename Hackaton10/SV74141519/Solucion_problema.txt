@@ -1,0 +1,50 @@
+use SV74141519
+
+db.createCollection("materia_prima")
+db.createCollection("insumos")
+db.createCollection("gestion_personal")
+db.createCollection("produccion")
+
+db.materia_prima.insertMany([
+  { nombre: "Madera", cantidad: 1000, unidad: "unidades" },
+  { nombre: "Tornillos", cantidad: 5000, unidad: "unidades" },
+  { nombre: "Lana", cantidad: 3000, unidad: "kilos" },
+  { nombre: "Oro", cantidad: 2000, unidad: "kilos" },
+  { nombre: "Petroleo", cantidad: 8500, unidad: "galones" },
+  { nombre: "Carbon", cantidad: 2500, unidad: "kilos" },
+  { nombre: "Alcohol", cantidad: 9000, unidad: "litros" },
+  { nombre: "Cobre", cantidad: 6500, unidad: "kilos" }
+
+])
+
+db.insumos.insertMany([
+  { nombre: "Pintura", cantidad: 200, unidad: "litros" },
+  { nombre: "Barniz", cantidad: 150, unidad: "litros" },
+  { nombre: "Jeringas", cantidad: 350, unidad: "unidades" },
+  { nombre: "Lapiceros", cantidad: 870, unidad: "unidades" },
+  { nombre: "Clips", cantidad: 5000, unidad: "unidades" },
+  { nombre: "Papel", cantidad: 4000, unidad: "millares" }
+])
+
+db.gestion_personal.insertMany([
+  { nombre: "Juan", cargo: "Operario" },
+  { nombre: "María", cargo: "Supervisor" },
+  { nombre: "Roberto", cargo: "Contador" },
+  { nombre: "Luis", cargo: "Analista de soporte TI" },
+  { nombre: "Jhosy", cargo: "Jefa de marketing" },
+  { nombre: "Jorge", cargo: "Analista" }
+])
+
+db.produccion.insertMany([
+  { fecha: ISODate("2024-03-29"), armarios_producidos: 50 },
+  { fecha: ISODate("2024-03-28"), anillos_producidos: 40 },
+  { fecha: ISODate("2024-02-15"), collares_producidos: 10 },
+  { fecha: ISODate("2024-04-13"), baldes_producidos: 90 },
+  { fecha: ISODate("2024-01-16"), chompas_producidos: 60 },
+  { fecha: ISODate("2024-02-29"), oberoles_producidos: 140 }
+])
+
+db.materia_prima.find()
+db.insumos.find()
+db.gestion_personal.find()
+db.produccion.find()

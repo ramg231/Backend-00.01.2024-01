@@ -1,0 +1,30 @@
+[{
+  "_id": {
+    "$oid": "660a3ec40f884532efdeaa48"
+  },
+  "descripcion": "Madera de pino",
+  "costo": 20,
+  "unidad": "metros cúbicos",
+  "stock": 100,
+  "fecha_pedido": "2024-03-31"
+},
+{
+  "_id": {
+    "$oid": "660a3ec40f884532efdeaa49"
+  },
+  "descripcion": "Tornillos",
+  "costo": 0.5,
+  "unidad": "unidad",
+  "stock": 500,
+  "fecha_pedido": "2024-03-30"
+},
+{
+  "_id": {
+    "$oid": "660a3ec40f884532efdeaa4a"
+  },
+  "descripcion": "Bisagras",
+  "costo": 2,
+  "unidad": "par",
+  "stock": 200,
+  "fecha_pedido": "2024-03-29"
+}]
