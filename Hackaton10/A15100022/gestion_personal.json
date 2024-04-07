@@ -1,0 +1,90 @@
+[{
+  "_id": {
+    "$oid": "660986e9d2ca6d5fae85b618"
+  },
+  "nombre": "Juan Pérez",
+  "cargo": "Diseñador de muebles",
+  "departamento": "Diseño",
+  "salario": 3000,
+  "fecha_contratacion": {
+    "$date": "2023-05-15T00:00:00.000Z"
+  },
+  "direccion": "Av. Principal #123",
+  "telefono": "123-456-7890",
+  "correo_electronico": "juan.perez@example.com"
+},
+{
+  "_id": {
+    "$oid": "660986e9d2ca6d5fae85b619"
+  },
+  "nombre": "María Gómez",
+  "cargo": "Operario de producción",
+  "departamento": "Producción",
+  "salario": 2500,
+  "fecha_contratacion": {
+    "$date": "2023-07-20T00:00:00.000Z"
+  },
+  "direccion": "Calle Secundaria #456",
+  "telefono": "987-654-3210",
+  "correo_electronico": "maria.gomez@example.com"
+},
+{
+  "_id": {
+    "$oid": "660986e9d2ca6d5fae85b61a"
+  },
+  "nombre": "Pedro López",
+  "cargo": "Gerente de ventas",
+  "departamento": "Ventas",
+  "salario": 4000,
+  "fecha_contratacion": {
+    "$date": "2022-12-10T00:00:00.000Z"
+  },
+  "direccion": "Plaza Central #789",
+  "telefono": "456-789-0123",
+  "correo_electronico": "pedro.lopez@example.com"
+},
+{
+  "_id": {
+    "$oid": "660986e9d2ca6d5fae85b61b"
+  },
+  "nombre": "Ana Martínez",
+  "cargo": "Supervisor de producción",
+  "departamento": "Producción",
+  "salario": 2800,
+  "fecha_contratacion": {
+    "$date": "2023-04-10T00:00:00.000Z"
+  },
+  "direccion": "Calle Principal #123",
+  "telefono": "123-456-7890",
+  "correo_electronico": "ana.martinez@example.com"
+},
+{
+  "_id": {
+    "$oid": "660986e9d2ca6d5fae85b61c"
+  },
+  "nombre": "Carlos González",
+  "cargo": "Contador",
+  "departamento": "Finanzas",
+  "salario": 3500,
+  "fecha_contratacion": {
+    "$date": "2023-03-01T00:00:00.000Z"
+  },
+  "direccion": "Avenida Central #456",
+  "telefono": "098-765-4321",
+  "correo_electronico": "carlos.gonzalez@example.com"
+},
+{
+  "_id": {
+    "$oid": "660986e9d2ca6d5fae85b61d"
+  },
+  "nombre": "Laura Sánchez",
+  "cargo": "Asistente de recursos humanos",
+  "departamento": "Recursos Humanos",
+  "salario": 2300,
+  "fecha_contratacion": {
+    "$date": "2023-02-15T00:00:00.000Z"
+  },
+  "direccion": "Plaza Principal #789",
+  "telefono": "456-789-0123",
+  "correo_electronico": "laura.sanchez@example.com"
+}]

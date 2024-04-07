@@ -1,0 +1,96 @@
+[{
+  "_id": {
+    "$oid": "660981cfd2ca6d5fae85b60a"
+  },
+  "proveedor": "Proveedor A",
+  "materia_prima": "Madera",
+  "cantidad": 1000,
+  "precio_unitario": 50,
+  "fecha_compra": {
+    "$date": "2024-03-30T00:00:00.000Z"
+  },
+  "usuario": "Juan Perez",
+  "tipo_mueble": "Silla",
+  "numero_factura": "FAC12345",
+  "metodo_pago": "Tarjeta de crédito",
+  "fecha_pago": {
+    "$date": "2024-03-31T00:00:00.000Z"
+  },
+  "fecha_entrega": {
+    "$date": "2024-04-02T00:00:00.000Z"
+  },
+  "estado_entrega": "Pendiente",
+  "observaciones": "Entrega urgente solicitada"
+},
+{
+  "_id": {
+    "$oid": "660981cfd2ca6d5fae85b60b"
+  },
+  "proveedor": "Proveedor B",
+  "materia_prima": "Tela",
+  "cantidad": 500,
+  "precio_unitario": 20,
+  "fecha_compra": {
+    "$date": "2024-03-28T00:00:00.000Z"
+  },
+  "usuario": "María García",
+  "tipo_mueble": "Sofá",
+  "numero_factura": "FAC12346",
+  "metodo_pago": "Transferencia bancaria",
+  "fecha_pago": {
+    "$date": "2024-03-29T00:00:00.000Z"
+  },
+  "fecha_entrega": {
+    "$date": "2024-04-01T00:00:00.000Z"
+  },
+  "estado_entrega": "Entregado",
+  "observaciones": ""
+},
+{
+  "_id": {
+    "$oid": "660981cfd2ca6d5fae85b60c"
+  },
+  "proveedor": "Proveedor C",
+  "materia_prima": "Espuma",
+  "cantidad": 800,
+  "precio_unitario": 10,
+  "fecha_compra": {
+    "$date": "2024-03-25T00:00:00.000Z"
+  },
+  "usuario": "Pedro López",
+  "tipo_mueble": "Silla",
+  "numero_factura": "FAC12347",
+  "metodo_pago": "Efectivo",
+  "fecha_pago": {
+    "$date": "2024-03-25T00:00:00.000Z"
+  },
+  "fecha_entrega": {
+    "$date": "2024-03-27T00:00:00.000Z"
+  },
+  "estado_entrega": "Entregado",
+  "observaciones": "Calidad premium"
+},
+{
+  "_id": {
+    "$oid": "6609822fd2ca6d5fae85b610"
+  },
+  "proveedor": "Proveedor D",
+  "materia_prima": "Tableros de MDF",
+  "cantidad": 700,
+  "precio_unitario": 25,
+  "fecha_compra": {
+    "$date": "2024-03-24T00:00:00.000Z"
+  },
+  "usuario": "Andrea Rodríguez",
+  "tipo_mueble": "Mesa",
+  "numero_factura": "FAC12351",
+  "metodo_pago": "Tarjeta de crédito",
+  "fecha_pago": {
+    "$date": "2024-03-25T00:00:00.000Z"
+  },
+  "fecha_entrega": {
+    "$date": "2024-03-28T00:00:00.000Z"
+  },
+  "estado_entrega": "Entregado",
+  "observaciones": "Espesor de 15mm"
+}]
