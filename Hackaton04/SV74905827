@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PachaQTec</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<style>
+body { background-color: #75c9bb;
+}
+</style>
+<h1 style="font-family: Arial, sans-serif;">Hackaton 04 </h1>
+<h1>Hackaton 04</h1>
+<br>
+    <button onclick="ejercicio1();" >Ejercicio 01</button> 
+    <br>
+    <br>
+    <button onclick="ejercicio2();" >Ejercicio 02</button> 
+    <script src="js/script.js"></script>
+    <br>
+    <br>
+    <button onclick="ejercicio3();" >Ejercicio 03</button> 
+    <script src="js/script.js"></script>
+
+    ------------------------------------------------------------
+
+    function ejercicio1(){
+    let numero1 = prompt("Ingrese el primer número");
+numero1 = parseInt(numero1)
+
+let numero2 = prompt("Ingrese el segundo número");
+numero2 = parseInt(numero2)
+
+function Suma(a,b)
+{
+    return a+b;
+}
+
+
+console.log("La suma es: " + Suma(numero1,numero2))
+}
+
+//------------------------------------------------------------------------------------------------------------------
+
+function ejercicio2() {
+    function potencia(base, exponente) {
+        return Math.pow(base, exponente);
+    }
+    
+    function mostrarResultado() {
+        const base = parseFloat(prompt("Ingrese la base:"));
+        const exponente = parseFloat(prompt("Ingrese el exponente:"));
+    
+        const resultado = potencia(base, exponente);
+        alert("El resultado de " + base + " elevado a la " + exponente + " es: " + resultado);
+        console.log("El resultado de " + base + " elevado a la " + exponente + " es: " + resultado);
+    }
+    
+    mostrarResultado();
+}
+
+//-------------------------------------------------------------------------------------------
+
+function ejercicio3() {
+    const sumOfCubes = (...numeros) => {
+        let sumaCubos = 0;
+        for (let i = 0; i < numeros.length; i++) {
+            sumaCubos += Math.pow(numeros[i], 3);
+        }
+        return sumaCubos;
+    };
+    const resultado = sumOfCubes(1, 5, 9);
+    console.log("La suma de los cubos es: " + resultado);
+    alert("La suma de los cubos es: " + resultado);  
+}
+
+//-------------------------------------------------------------------------------------------
+
+function ejercicio4() {
+    const triArea = (base, altura) => (base * altura) / 2;
+    const area = triArea(3, 2);
+    console.log(area); 
+    alert("El area del triangulo es: " + area);
+}
+
+//---------------------------------------------------------------------------------------
+
+function ejercicio5() {
+    function calculator() {
+     
+        const num1 = parseFloat(prompt("Ingrese el primer número:"));
+        const num2 = parseFloat(prompt("Ingrese el segundo número:"));
+        const operacion = prompt("Ingrese la operación matemática (+, -, /, x, %):");
+        let resultado;
+        switch (operacion) {
+            case '+':
+                resultado = num1 + num2;
+                break;
+            case '-':
+                resultado = num1 - num2;
+                break;
+            case '/':
+                resultado = num1 / num2;
+                break;
+            case 'x':
+                resultado = num1 * num2;
+                break;
+            case '%':
+                resultado = num1 % num2;
+                break;
+            default:
+                alert("El parámetro no es reconocido");
+                console.log("El parámetro no es reconocido");
+                return;
+        }
+        alert("El resultado de la operación es: " + resultado);
+        console.log("El resultado de la operación es: " + resultado);
+    }
+    calculator(); 
+}
+
+
+    <br>
+    <br>
+    <button onclick="ejercicio4();" >Ejercicio 04</button> 
+    <script src="js/script.js"></script>
+    <br>
+    <br>
+    <button onclick="ejercicio5();" >Ejercicio 05</button> 
+    <script src="js/script.js"></script>
+</body>
+</html>
