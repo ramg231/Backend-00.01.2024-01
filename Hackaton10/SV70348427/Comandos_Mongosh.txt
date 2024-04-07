@@ -1,0 +1,42 @@
+use SV70348427
+
+db.createCollection("materia_prima")
+db.createCollection("insumos")
+db.createCollection("gestion_personal")
+db.createCollection("produccion")
+
+db.materia_prima.insertMany([
+  { nombre: "Madera", cantidad: 200, unidad: "unidad" },
+  { nombre: "Papel", cantidad: 12000, unidad: "unidad" },
+  { nombre: "Petroleo", cantidad: 5000, unidad: "galon" },
+  { nombre: "Carbon", cantidad: 1000, unidad: "kilogramos" },
+  { nombre: "Oro", cantidad: 1000, unidad: "Kilogramos" }])
+
+
+db.insumos.insertMany([
+  { nombre: "Pintura", cantidad: 50, unidad: "litros" },
+  { nombre: "Papel", cantidad: 1000, unidad: "millares" },
+  { nombre: "Semento", cantidad: 20, unidad: "bolsa semento" },
+  { nombre: "Lapiz", cantidad: 200, unidad: "unidades" },
+  { nombre: "Lapiceros", cantidad: 870, unidad: "unidades" }
+])
+
+db.personal.insertMany([
+  { nombre: "Javier", apellido: "Lopez", dni:2041564, cargo:"Supervisor" },
+  { nombre: "Sebastian", apellido: "Rodriguez" , dni: 9475484, cargo:"Almacenero" },
+  { nombre: "Carlos", apellido: "Alvarez" , dni: 6428741, cargo:"Conductor" },
+  { nombre: "Juan", apellido: "Carrion" , dni: 2514568, cargo:"Conductor" }
+])
+
+
+db.produccion.insertOne([
+    { producto: "Calamina",cantidad: 50, fecha: "2024-04-07", cod_empl: "codemp004"},
+    { producto: "Fierro",cantidad: 80, fecha: "2024-04-05", cod_empl: "codemp002"},
+    { producto: "Clavos", cantidad: 300, fecha: "2024-04-01", cod_empl: "codemp003"},
+    { producto: "Tornillos", cantidad: 250, fecha: "2024-04-01", cod_empl: "codemp004"}
+])
+
+db.personal.find()
+db.materia_prima.find()
+db.insumos.find()
+db.produccion.find()
