@@ -1,0 +1,39 @@
+db.SV77130275
+test.SV77130275
+use SV77130275
+switched to db SV77130275
+
+************************MATERIA PRIMA****************************
+
+db.Compra_Materia_Prima.insertMany([
+  {Nombre:"Madera", Medida:"174cm x 3m", Cantidad:100, Precio_Unit:18, PrecioTotal:1800, Proveedor:"Maderitas S.A." },
+  {Nombre:"Chapas", Tipo:"Cromado", Cantidad:50, Precio_Unit:5, Precio_Total:250, Proveedor:"El Cromitas S.R.L."},
+  {Nombre:"Rueditas", Tipo:"Plastico", Cantidad:200, Precio_Unit:2, Precio_Total:400, Proveedor:"Lanteritos S.A.C."}
+])
+
+************************COMPRA INSUMOS************************
+
+db.Compra_Insumos.insertMany([
+  {Nombre:"Clavos", Medida:"1Ch", Cantidad:"10Kg", Precio_x_Kg:8, Precio_Total:80, Proveedor:"Fierritos S.A."},
+  {Nombre:"Adesivo", Tipo:"S14", Marca:"Addesivee", cantidad:20, Precio_Unit:10, Precio_Total:200, Proveedor: "Buss Import"},
+  {Nombre:"Barniz", Color:"Castaño Line", Tipo:"Secado Rapido", Cantidad:20, Precio_Unit:25, Precio_Total:500, Proveedor:"Ferreteria el Pollo SA"}
+])
+
+************************GESTION PERSONAL************************
+
+db.Gestion_Personal.insertMany([
+  {Nombre:"Maritza", Apellido:"Chambi", Sexo:"F", ID_Empleado:001, Cargo:"Jefa de Empresa"},
+  {Nombre:"Jonathan", Apellido:"Pacompia", Sexo:"M", ID_Empleado:002, Cargo:"Jefe de Produccion"},
+  {Nombre:"Sammy", Apellido:"Cabalier", Sexo:"F", ID_Empleado:003, Cargo:"Tec. Produccion"}, 
+  {Nombre:"Scooby", Apellido:"Marchs", Sexo:"M", ID_Empleado:004, Cargo:"Tec. Produccion"}, 
+  {Nombre:"Cala", Apellido:"Alcazar", Sexo:"F", ID_Empleado:005, Cargo:"Tec. Produccion"}, 
+  {Nombre:"Stiven", Apellido:"ReddGer", Sexo:"M", ID_Empleado:006, Cargo:"Control de Calidad"}
+])
+
+************************PRODUCCION************************
+
+db.Produccion.insertMany([
+  {Nombre:"Armario", Version:"Personal", Cantidad_De_Madera:3, Cantidad_De_Chapas:1, Cantidad_De_Rueditas:false},
+  {Nombre:"Armario", Version:"Mediana", Cantidad_De_Madera:5, Cantidad_De_Chapas:2, Cantidad_De_Rueditas:4},
+  {Nombre:"Armario", Version:"King 3.0", Cantidad_De_Madera:10, Cantidad_De_Chapas:4, Cantidad_De_Rueditas:8}
+])

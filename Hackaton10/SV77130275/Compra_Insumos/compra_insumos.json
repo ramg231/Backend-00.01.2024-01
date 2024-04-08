@@ -1,0 +1,35 @@
+[{
+    "_id": {
+      "$oid": "660e245bc6704fa5a6309dd7"
+    },
+    "Nombre": "Clavos",
+    "Medida": "1Ch",
+    "Cantidad": "10Kg",
+    "Precio_x_Kg": 8,
+    "Precio_Total": 80,
+    "Proveedor": "Fierritos S.A."
+  },
+  {
+    "_id": {
+      "$oid": "660e245bc6704fa5a6309dd8"
+    },
+    "Nombre": "Adesivo",
+    "Tipo": "S14",
+    "Marca": "Addesivee",
+    "cantidad": 20,
+    "Precio_Unit": 10,
+    "Precio_Total": 200,
+    "Proveedor": "Buss Import"
+  },
+  {
+    "_id": {
+      "$oid": "660e245bc6704fa5a6309dd9"
+    },
+    "Nombre": "Barniz",
+    "Color": "Castaño Line",
+    "Tipo": "Secado Rapido",
+    "Cantidad": 20,
+    "Precio_Unit": 25,
+    "Precio_Total": 500,
+    "Proveedor": "Ferreteria el Pollo SA"
+  }]
