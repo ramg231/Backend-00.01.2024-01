@@ -1,0 +1,16 @@
+[{
+    "_id": {
+      "$oid": "6609af5dd51bf4cea220c6bf"
+    },
+    "nombre": "Juan Perez",
+    "puesto": "Operario",
+    "salario": 2000
+  },
+  {
+    "_id": {
+      "$oid": "6609af5dd51bf4cea220c6c0"
+    },
+    "nombre": "Miguel Lopez",
+    "puesto": "Ayudante",
+    "salario": 1025
+  }]

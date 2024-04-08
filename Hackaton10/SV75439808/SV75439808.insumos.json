@@ -1,0 +1,9 @@
+[{
+  "_id": "CMP002",
+  "date_purchase": "2024-03-30",
+  "supplier": "Supplier X",
+  "insumo": "Bisagras",
+  "quantity": 500,
+  "price_unitary": "$2",
+  "total": "$1000"
+}]

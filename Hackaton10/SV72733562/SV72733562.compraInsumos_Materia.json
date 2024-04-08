@@ -1,0 +1,26 @@
+[{
+  "_id": {
+    "$oid": "66087871d34a2174b29c12ed"
+  },
+  "nombre": "madera",
+  "cantidad": 100,
+  "proveedor": "dinor RC",
+  "fecha_compra": {
+    "$date": "2024-03-30T00:00:00.000Z"
+  },
+  "tipo": "materia",
+  "precio": 100
+},
+{
+  "_id": {
+    "$oid": "66087871d34a2174b29c12ee"
+  },
+  "nombre": "tornillos",
+  "cantidad": 300,
+  "proveedor": "juan",
+  "fecha_compra": {
+    "$date": "2024-03-30T00:00:00.000Z"
+  },
+  "tipo": "insumo",
+  "precio": 300
+}]

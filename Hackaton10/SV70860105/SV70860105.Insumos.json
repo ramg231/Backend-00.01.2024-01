@@ -1,0 +1,48 @@
+[{
+  "_id": {
+    "$oid": "6609d7003bdcc9d877dc1383"
+  },
+  "Nombre": "Tornillo",
+  "Cantidad": 500,
+  "Precio": 2
+},
+{
+  "_id": {
+    "$oid": "6609d7423bdcc9d877dc1384"
+  },
+  "Nombre": "Bisagra",
+  "Cantidad": 500,
+  "Precio": 2.5
+},
+{
+  "_id": {
+    "$oid": "6609d7943bdcc9d877dc1385"
+  },
+  "Nombre": "Manija",
+  "Cantidad": 300,
+  "Precio": 4
+},
+{
+  "_id": {
+    "$oid": "6609d7eb3bdcc9d877dc1386"
+  },
+  "Nombre": "Tiradores",
+  "Cantidad": 250,
+  "Precio": 3
+},
+{
+  "_id": {
+    "$oid": "6609da803bdcc9d877dc1389"
+  },
+  "Nombre": "Cola",
+  "Cantidad": 35,
+  "Precio": 5
+},
+{
+  "_id": {
+    "$oid": "6609dd183bdcc9d877dc138d"
+  },
+  "Nombre": "Barniz",
+  "Cantidad": 15,
+  "Precio": 20
+}]

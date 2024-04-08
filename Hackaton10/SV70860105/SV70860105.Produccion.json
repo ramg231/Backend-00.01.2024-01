@@ -1,0 +1,68 @@
+[{
+  "_id": {
+    "$oid": "6609d99e3bdcc9d877dc1388"
+  },
+  "Nombre": "Armario de madera",
+  "Materia Prima": {
+    "Nombre": "Madera",
+    "Cantidad": 20
+  },
+  "Insumos": [
+    {
+      "Nombre": "Tornillos",
+      "Cantidad": 40
+    },
+    {
+      "Nombre": "Bisagra",
+      "Cantidad": 20
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "6609db8c3bdcc9d877dc138b"
+  },
+  "Nombre": "Armario de contrachapado",
+  "Materia Prima": {
+    "Nombre": "Contrachapado",
+    "Cantidad": 25
+  },
+  "Insumos": [
+    {
+      "Nombre": "Bisagra",
+      "Cantidad": 5
+    },
+    {
+      "Nombre": "Cola",
+      "Cantidad": 2
+    },
+    {
+      "Nombre": "Manija",
+      "Cantidad": 2
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "6609dcea3bdcc9d877dc138c"
+  },
+  "Nombre": "Armario con tiradores",
+  "Materia Prima": {
+    "Nombre": "Madera",
+    "Cantidad": 15
+  },
+  "Insumos": [
+    {
+      "Nombre": "Tiradores",
+      "Cantidad": 5
+    },
+    {
+      "Nombre": "Tornillo",
+      "Cantidad": 20
+    },
+    {
+      "Nombre": "Barniz",
+      "Cantidad": 1
+    }
+  ]
+}]
