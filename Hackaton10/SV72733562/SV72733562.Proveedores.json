@@ -1,0 +1,18 @@
+[{
+  "_id": {
+    "$oid": "660888bfd34a2174b29c12f2"
+  },
+  "nombreProveedor": "dinorRC",
+  "calleProveedor": "calle300",
+  "telefonoProveedor": "1234567890",
+  "emailProveedor": "dinorRC@gmail.com"
+},
+{
+  "_id": {
+    "$oid": "660888bfd34a2174b29c12f3"
+  },
+  "nombreProveedor": "juan",
+  "calleProveedor": "calle690",
+  "telefonoProveedor": "0987654321",
+  "emailProveedor": "JuanCaballo@gmail.com"
+}]

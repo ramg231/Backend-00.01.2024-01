@@ -1,0 +1,50 @@
+[{
+  "_id": {
+    "$oid": "6609ade2d33b8faddd91c0e4"
+  },
+  "tipo_armario": "Armario",
+  "cantidad_producida": 2,
+  "fecha_produccion": "2024-03-31",
+  "materia_prima": [
+    {
+      "nombre": "Madera",
+      "cantidad_utilizada": 10
+    }
+  ],
+  "insumos": [
+    {
+      "nombre": "Clavos",
+      "cantidad_utilizada": 40
+    },
+    {
+      "nombre": "Tornillos",
+      "cantidad_utilizada": 20
+    },
+    {
+      "nombre": "Bisagras",
+      "cantidad_utilizada": 4
+    }
+  ],
+  "personal": "Juan Pérez"
+},
+{
+  "_id": {
+    "$oid": "6609ade2d33b8faddd91c0e5"
+  },
+  "tipo_armario": "Marco de fotos de madera",
+  "cantidad_producida": 5,
+  "fecha_produccion": "2024-03-31",
+  "materia_prima": [
+    {
+      "nombre": "Madera",
+      "cantidad_utilizada": 5
+    }
+  ],
+  "insumos": [
+    {
+      "nombre": "Pintura",
+      "cantidad_utilizada": 1
+    }
+  ],
+  "personal": "Luis Torres"
+}]

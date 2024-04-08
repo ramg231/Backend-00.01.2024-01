@@ -1,0 +1,72 @@
+[{
+  "_id": {
+    "$oid": "660a2cf99a9540ba5882d018"
+  },
+  "Descripcion": "Bisagras",
+  "Costo": "6$",
+  "Unidad": "und",
+  "Stock": 400,
+  "Fecha_Pedido": {
+    "$date": "2024-04-30T05:00:00.000Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "660a2cf99a9540ba5882d019"
+  },
+  "Descripcion": "Cerraduras",
+  "Costo": "8$",
+  "Unidad": "und",
+  "Stock": 200,
+  "Fecha_Pedido": {
+    "$date": "2024-04-30T05:00:00.000Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "660a2cf99a9540ba5882d01a"
+  },
+  "Descripcion": "Manijas",
+  "Costo": "6$",
+  "Unidad": "und",
+  "Stock": 200,
+  "Fecha_Pedido": {
+    "$date": "2024-04-30T05:00:00.000Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "660a2cf99a9540ba5882d01b"
+  },
+  "Descripcion": "Pintura",
+  "Costo": "6$",
+  "Unidad": "und",
+  "Stock": 200,
+  "Fecha_Pedido": {
+    "$date": "2024-04-30T05:00:00.000Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "660a2cf99a9540ba5882d01c"
+  },
+  "Descripcion": "Relleno",
+  "Costo": "2$",
+  "Unidad": "kg",
+  "Stock": 50,
+  "Fecha_Pedido": {
+    "$date": "2024-04-30T05:00:00.000Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "660a2cf99a9540ba5882d01d"
+  },
+  "Descripcion": "Pegamento",
+  "Costo": "8$",
+  "Unidad": "galon",
+  "Stock": 30,
+  "Fecha_Pedido": {
+    "$date": "2024-04-30T05:00:00.000Z"
+  }
+}]

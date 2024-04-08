@@ -1,0 +1,32 @@
+[{
+  "_id": {
+    "$oid": "660a342ca76b3cee60f03bc8"
+  },
+  "producto": "1",
+  "unidadesaproducir": 1,
+  "date": "Sun Mar 31 2024 23:12:28 GMT-0500 (hora estándar de Perú)"
+},
+{
+  "_id": {
+    "$oid": "660a342ca76b3cee60f03bc9"
+  },
+  "producto": "2",
+  "unidadesaproducir": 23,
+  "date": "Sun Mar 31 2024 23:12:28 GMT-0500 (hora estándar de Perú)"
+},
+{
+  "_id": {
+    "$oid": "660a342ca76b3cee60f03bca"
+  },
+  "producto": "3",
+  "unidadesaproducir": 20,
+  "date": "Sun Mar 31 2024 23:12:28 GMT-0500 (hora estándar de Perú)"
+},
+{
+  "_id": {
+    "$oid": "660a342ca76b3cee60f03bcb"
+  },
+  "producto": "4",
+  "unidadesaproducir": 16,
+  "date": "Sun Mar 31 2024 23:12:28 GMT-0500 (hora estándar de Perú)"
+}]

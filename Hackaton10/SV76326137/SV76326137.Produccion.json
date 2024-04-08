@@ -1,0 +1,66 @@
+[{
+  "_id": {
+    "$oid": "660a41770f884532efdeaa52"
+  },
+  "Categoria": "Aglomerado",
+  "Costo": "45$",
+  "Precio": "75$",
+  "Stock": 80,
+  "Vendidos": 120,
+  "Entregados": 90
+},
+{
+  "_id": {
+    "$oid": "660a41770f884532efdeaa53"
+  },
+  "Categoria": "Madera de Caoba",
+  "Costo": "120$",
+  "Precio": "200$",
+  "Stock": 30,
+  "Vendidos": 50,
+  "Entregados": 20
+},
+{
+  "_id": {
+    "$oid": "660a41770f884532efdeaa54"
+  },
+  "Categoria": "MDF",
+  "Costo": "60$",
+  "Precio": "100$",
+  "Stock": 150,
+  "Vendidos": 180,
+  "Entregados": 130
+},
+{
+  "_id": {
+    "$oid": "660a41770f884532efdeaa55"
+  },
+  "Categoria": "Madera de Cedro",
+  "Costo": "90$",
+  "Precio": "150$",
+  "Stock": 70,
+  "Vendidos": 100,
+  "Entregados": 80
+},
+{
+  "_id": {
+    "$oid": "660a41770f884532efdeaa56"
+  },
+  "Categoria": "Tablero OSB",
+  "Costo": "55$",
+  "Precio": "90$",
+  "Stock": 120,
+  "Vendidos": 140,
+  "Entregados": 110
+},
+{
+  "_id": {
+    "$oid": "660a41770f884532efdeaa57"
+  },
+  "Categoria": "Madera de Nogal",
+  "Costo": "150$",
+  "Precio": "250$",
+  "Stock": 40,
+  "Vendidos": 60,
+  "Entregados": 30
+}]

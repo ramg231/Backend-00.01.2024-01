@@ -1,0 +1,40 @@
+[{
+  "_id": {
+    "$oid": "660a2e9ba76b3cee60f03bbc"
+  },
+  "title": "MateriaP1",
+  "unidad": "Metros",
+  "cantidad": 5,
+  "precio": 1,
+  "date": "Sun Mar 31 2024 22:48:43 GMT-0500 (hora estándar de Perú)"
+},
+{
+  "_id": {
+    "$oid": "660a2e9ba76b3cee60f03bbd"
+  },
+  "title": "MateriaP2",
+  "unidad": "Metros",
+  "cantidad": 5,
+  "precio": 1,
+  "date": "Sun Mar 31 2024 22:48:43 GMT-0500 (hora estándar de Perú)"
+},
+{
+  "_id": {
+    "$oid": "660a2e9ba76b3cee60f03bbe"
+  },
+  "title": "MateriaP3",
+  "unidad": "Metros",
+  "cantidad": 5,
+  "precio": 1,
+  "date": "Sun Mar 31 2024 22:48:43 GMT-0500 (hora estándar de Perú)"
+},
+{
+  "_id": {
+    "$oid": "660a2e9ba76b3cee60f03bbf"
+  },
+  "title": "MateriaP4",
+  "unidad": "Metros",
+  "cantidad": 5,
+  "precio": 1,
+  "date": "Sun Mar 31 2024 22:48:43 GMT-0500 (hora estándar de Perú)"
+}]

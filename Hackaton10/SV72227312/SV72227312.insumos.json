@@ -1,0 +1,132 @@
+[{
+  "_id": {
+    "$oid": "6609a1aed33b8faddd91c0d0"
+  },
+  "fecha_compra": "2024-03-31",
+  "proveedor": "FERRETERIA S.A.C",
+  "insumo": "Clavos",
+  "cantidad": 960,
+  "unidad": "unidades",
+  "precio_unitario": 0.05
+},
+{
+  "_id": {
+    "$oid": "6609a1aed33b8faddd91c0d1"
+  },
+  "fecha_compra": "2024-03-31",
+  "proveedor": "FERRETERIA S.A.C",
+  "insumo": "Tornillos",
+  "cantidad": 480,
+  "unidad": "unidades",
+  "precio_unitario": 0.08
+},
+{
+  "_id": {
+    "$oid": "6609a1aed33b8faddd91c0d2"
+  },
+  "fecha_compra": "2024-03-31",
+  "proveedor": "FERRETERIA S.A.C",
+  "insumo": "Pegamento",
+  "cantidad": 20,
+  "unidad": "litros",
+  "precio_unitario": 5
+},
+{
+  "_id": {
+    "$oid": "6609a88dd33b8faddd91c0da"
+  },
+  "fecha_compra": "2024-03-31",
+  "proveedor": "FERRETERIA S.A.C",
+  "insumo": "Cable electrico",
+  "cantidad": 50,
+  "unidad": "metros",
+  "precio_unitario": 12
+},
+{
+  "_id": {
+    "$oid": "6609a88dd33b8faddd91c0db"
+  },
+  "fecha_compra": "2024-03-31",
+  "proveedor": "FERRETERIA S.A.C",
+  "insumo": "Bombillas",
+  "cantidad": 50,
+  "unidad": "unidades",
+  "precio_unitario": 10
+},
+{
+  "_id": {
+    "$oid": "6609a88dd33b8faddd91c0dc"
+  },
+  "fecha_compra": "2024-03-31",
+  "proveedor": "FERRETERIA S.A.C",
+  "insumo": "Esmalte ceramico",
+  "cantidad": 10,
+  "unidad": "litros",
+  "precio_unitario": 15
+},
+{
+  "_id": {
+    "$oid": "6609a88dd33b8faddd91c0dd"
+  },
+  "fecha_compra": "2024-03-31",
+  "proveedor": "FERRETERIA S.A.C",
+  "insumo": "Bisagras",
+  "cantidad": 26,
+  "unidad": "unidades",
+  "precio_unitario": 12
+},
+{
+  "_id": {
+    "$oid": "6609a88dd33b8faddd91c0de"
+  },
+  "fecha_compra": "2024-03-31",
+  "proveedor": "FERRETERIA S.A.C",
+  "insumo": "Algodón",
+  "cantidad": 20,
+  "unidad": "kilogramos",
+  "precio_unitario": 10
+},
+{
+  "_id": {
+    "$oid": "6609a88dd33b8faddd91c0df"
+  },
+  "fecha_compra": "2024-03-31",
+  "proveedor": "FERRETERIA S.A.C",
+  "insumo": "Hilo",
+  "cantidad": 10,
+  "unidad": "carretes",
+  "precio_unitario": 10
+},
+{
+  "_id": {
+    "$oid": "6609a88dd33b8faddd91c0e0"
+  },
+  "fecha_compra": "2024-03-31",
+  "proveedor": "FERRETERIA S.A.C",
+  "insumo": "Bastidor para tejer",
+  "cantidad": 5,
+  "unidad": "unidades",
+  "precio_unitario": 20
+},
+{
+  "_id": {
+    "$oid": "6609a88dd33b8faddd91c0e1"
+  },
+  "fecha_compra": "2024-03-31",
+  "proveedor": "FERRETERIA S.A.C",
+  "insumo": "Tijeras",
+  "cantidad": 10,
+  "unidad": "unidades",
+  "precio_unitario": 8
+},
+{
+  "_id": {
+    "$oid": "6609b534d33b8faddd91c0e6"
+  },
+  "fecha_compra": "2024-03-31",
+  "proveedor": "FERRETERIA S.A.C",
+  "insumo": "Pintura",
+  "cantidad": 19,
+  "unidad": "litros",
+  "precio_unitario": 20
+}]

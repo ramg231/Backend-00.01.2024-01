@@ -6,7 +6,7 @@ El repo del curso de Backend
 
 solo la primera vez que descargamos el reporsitorio git
 
-git remote add fuentes 
+
 
 cada vez que iniciamos clase
 

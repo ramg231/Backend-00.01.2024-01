@@ -1,0 +1,9 @@
+[{
+  "_id": "CMP001",
+  "date_puchase": "2024-03-29",
+  "supplier": "Proveedor Y",
+  "product": "Madera",
+  "quantity": 100,
+  "price_unit": "$10",
+  "total": "$1000"
+}]

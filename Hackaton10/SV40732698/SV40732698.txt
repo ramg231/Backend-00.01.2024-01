@@ -1,0 +1,136 @@
+use Fabrica_de_Armarios
+db.MATERIA_PRIMA.insertMany([
+  {
+    Descripcion: "Aglomerado",
+    Costo: "6$",
+    Unidad: "m2",
+    Stock: 264,
+    Fecha_Pedido: new Date(2024, 2, 14)
+  },
+  {
+    Descripcion: "Pino",
+    Costo: "20$",
+    Unidad: "m2",
+    Stock: 128,
+    Fecha_Pedido: new Date(2024, 2, 30)
+  },
+  {
+    Descripcion: "Cedro",
+    Costo: "30$",
+    Unidad: "m2",
+    Stock: 128,
+    Fecha_Pedido: new Date(2024, 3, 10)
+  }
+]);
+db.INSUMOS.insertMany([
+  {
+    Descripcion: "Bisagras",
+    Costo: "6$",
+    Unidad: "und",
+    Stock: 400,
+    Fecha_Pedido: new Date(2024, 3, 30)
+  },
+  {
+    Descripcion: "Cerraduras",
+    Costo: "8$",
+    Unidad: "und",
+    Stock: 200,
+    Fecha_Pedido: new Date(2024, 3, 30)
+  },
+  {
+    Descripcion: "Manijas",
+    Costo: "6$",
+    Unidad: "und",
+    Stock: 200,
+    Fecha_Pedido: new Date(2024, 3, 30)
+  },
+  {
+    Descripcion: "Pintura",
+    Costo: "6$",
+    Unidad: "und",
+    Stock: 200,
+    Fecha_Pedido: new Date(2024, 3, 30)
+  },
+  {
+    Descripcion: "Relleno",
+    Costo: "2$",
+    Unidad: "kg",
+    Stock: 50,
+    Fecha_Pedido: new Date(2024, 3, 30)
+  },
+  {
+    Descripcion: "Pegamento",
+    Costo: "8$",
+    Unidad: "galon",
+    Stock: 30,
+    Fecha_Pedido: new Date(2024, 3, 30)
+  }
+]);
+db.PRODUCCION.insertMany([
+  {
+    Categoria: "Aglomerado",
+    Costo: "45$",
+    Precio: "75$",
+    Stock: 80,
+    Vendidos: 120,
+    Entregados: 90
+  },
+  {
+    Categoria: "Pino",
+    Costo: "95$",
+    Precio: "120$",
+    Stock: 40,
+    Vendidos: 90,
+    Entregados: 80
+  },
+  {
+    Categoria: "Cedro",
+    Costo: "245$",
+    Precio: "375$",
+    Stock: 40,
+    Vendidos: 30,
+    Entregados: 30
+  }
+]);
+db.PERSONAL.insertMany([
+  {
+    Nombre: "Luis",
+    Apellidos: "Perez Guzman",
+    Puesto: "Administrador",
+    Fecha_Ingreso: new Date(2023, 0, 1),
+    DNI: "55555555",
+    Fecha_Vacac: new Date(2024, 9, 1)
+  },
+  {
+    Nombre: "Enrique",
+    Apellidos: "Vidal Lagos",
+    Puesto: "Operario",
+    Fecha_Ingreso: new Date(2023, 0, 1),
+    DNI: "44444444",
+    Fecha_Vacac: new Date(2024, 10, 1)
+  },
+  {
+    Nombre: "Luisa Maria",
+    Apellidos: "Quintana Saldaña",
+    Puesto: "Contabilidad",
+    Fecha_Ingreso: new Date(2023, 0, 1),
+    DNI: "33333333",
+    Fecha_Vacac: new Date(2024, 8, 1)
+  },
+  {
+    Nombre: "Carlos Eduardo",
+    Apellidos: "Garcia Quiñones",
+    Puesto: "Operario",
+    Fecha_Ingreso: new Date(2023, 0, 1),
+    DNI: "22222222",
+    Fecha_Vacac: new Date(2024, 8, 1)
+  },
+  {
+    Nombre: "Jorge",
+    Apellidos: "Castro Huaman",
+    Puesto: "Ventas",
+    Fecha_Ingreso: new Date(2023, 0, 1),
+    DNI: "11111111",
+    Fecha_Vacac: new Date(2024, 6, 1)
+  }
+]);
