@@ -90,9 +90,9 @@ async function crud(base, coleccion, accion, filtro = null, data = null) {
 
 }
 
-let res = crud("sample_mflix", "movies", "leerUno").then((res) => {
-    console.log(res);
-});
+// let res = crud("sample_mflix", "movies", "leerUno").then((res) => {
+//     console.log(res);
+// });
 
 // let opciones = { year: 2001 };
 // let res2 = crud("sample_mflix", "movies", "leerTodos", opciones).then((res) => {
