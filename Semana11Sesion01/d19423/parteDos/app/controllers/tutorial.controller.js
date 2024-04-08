@@ -18,8 +18,7 @@ exports.create = (req, res) => {
         description: req.body.description,
         published: req.body.published ? req.body.published : false
     };
-    Tutorial.create(tutorial)
-        .then(data => {
+    Tutorial.create(tutorial).then(data => {
             res.send(data);
         })
         .catch(err => {
