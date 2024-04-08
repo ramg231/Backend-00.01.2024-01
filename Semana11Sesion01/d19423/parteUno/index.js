@@ -5,7 +5,9 @@ import { Sequelize, DataTypes } from 'sequelize';
 const sequelize = new Sequelize(
     'hello_world_db',
     'root',
-    'ga17190112',
+
+    'HkTuUfU!7b*!QZ',
+
      {
        host: 'localhost',
        dialect: 'mysql'

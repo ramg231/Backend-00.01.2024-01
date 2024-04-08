@@ -1,0 +1,30 @@
+[{
+    "_id": {
+      "$oid": "660e2b6cc6704fa5a6309de0"
+    },
+    "Nombre": "Armario",
+    "Version": "Personal",
+    "Cantidad_De_Madera": 3,
+    "Cantidad_De_Chapas": 1,
+    "Cantidad_De_Rueditas": false
+  },
+  {
+    "_id": {
+      "$oid": "660e2b6cc6704fa5a6309de1"
+    },
+    "Nombre": "Armario",
+    "Version": "Mediana",
+    "Cantidad_De_Madera": 5,
+    "Cantidad_De_Chapas": 2,
+    "Cantidad_De_Rueditas": 4
+  },
+  {
+    "_id": {
+      "$oid": "660e2b6cc6704fa5a6309de2"
+    },
+    "Nombre": "Armario",
+    "Version": "King 3.0",
+    "Cantidad_De_Madera": 10,
+    "Cantidad_De_Chapas": 4,
+    "Cantidad_De_Rueditas": 8
+  }]

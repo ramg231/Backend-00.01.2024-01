@@ -1,0 +1,33 @@
+[{
+    "_id": {
+      "$oid": "660e20e2c6704fa5a6309dd4"
+    },
+    "Nombre": "Madera",
+    "Medida": "174cm x 3m",
+    "Cantidad": 100,
+    "Precio_Unit": 18,
+    "PrecioTotal": 1800,
+    "Proveedor": "Maderitas S.A."
+  },
+  {
+    "_id": {
+      "$oid": "660e20e2c6704fa5a6309dd5"
+    },
+    "Nombre": "Chapas",
+    "Tipo": "Cromado",
+    "Cantidad": 50,
+    "Precio_Unit": 5,
+    "Precio_Total": 250,
+    "Proveedor": "El Cromitas S.R.L."
+  },
+  {
+    "_id": {
+      "$oid": "660e20e2c6704fa5a6309dd6"
+    },
+    "Nombre": "Rueditas",
+    "Tipo": "Plastico",
+    "Cantidad": 200,
+    "Precio_Unit": 2,
+    "Precio_Total": 400,
+    "Proveedor": "Lanteritos S.A.C."
+  }]

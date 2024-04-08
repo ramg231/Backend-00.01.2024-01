@@ -1,0 +1,54 @@
+//show dbs
+
+use Empresa de Armarios
+
+db.compras_materia_insumos.insertMany( [
+
+   { fecha:new Date("2024-03-31"), proveedor: "Madera Andina", material: "Madera", cantidad: 100, precio_unitario: 10, tipo: "materia" },
+
+    {fecha:new Date("2024-03-30"), proveedor: "Fierros s.a.c", material: "Metal", cantidad: 50, precio_unitario: 15, tipo: "materia" },
+
+      {fecha:new Date("2024-03-30"), proveedor: "tekno s.a.c", insumo: "Pintura", cantidad: 20, precio_unitario: 5,tipo: "insumos"}
+  ])
+
+db.Personal.insertMany([
+
+   { nombre: "Juan Perez", puesto: "Operario", salario: 2000},
+
+  {nombre: "Miguel Lopez", puesto: "Ayudante", salario: 1025}])
+
+
+db.Produccion.insertMany([
+
+   {fecha: new Date("2024-03-31"), producto: "comoda", cantidad_producida: 15, costo_total: 250},
+
+   {fecha: new Date("2024-03-31"), producto: "Armario", cantidad_producida: 10, costo_total: 300},
+
+   {fecha: new Date("2024-04-21"), producto: "Repostero", cantidad_producida: 10, costo_total: 200}])
+
+
+// Obtener todas las compras de materia prima
+db.compras_materia_prima.find();
+
+
+// Obtener todas las compras de insumos
+db.compras_insumos.find();
+
+
+// Obtener todos los registros de gestión de personal
+db.gestion_personal.find();
+
+
+// Obtener todos los registros de producción
+db.produccion.find();
+
+
+// Actualizar el salario de un empleado
+db.gestion_personal.updateOne(
+    { "nombre": "Juan Pérez" },
+    { $set: { "salario": 2200 } }
+);
+
+// Eliminar una compra de materia prima
+db.compras_materia_prima.deleteOne({
+})
