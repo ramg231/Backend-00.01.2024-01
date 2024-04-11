@@ -1,20 +1,16 @@
 {
-  "name": "parteuno",
+  "name": "partedos",
   "version": "1.0.0",
-  "main": "index.js",
+  "description": "",
+  "main": "app.js",
   "scripts": {
-    "dev": "nodemon ./build/index.js",
-    "build": "npx tsc",
+    "dev": "nodemon app.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "devDependencies": {
-    "typescript": "^5.4.4"
-  },
   "dependencies": {
     "nodemon": "^3.1.0"
-  },
-  "description": ""
+  }
 }
