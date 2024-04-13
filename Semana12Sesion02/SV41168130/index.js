@@ -16,7 +16,9 @@ http.createServer(function (req, res) {
                 return res.end();
             });
             break;
-        case '/index':
+        case '/menu':
+            break;
+        case '/crear':
             break;
         default:
             break;
