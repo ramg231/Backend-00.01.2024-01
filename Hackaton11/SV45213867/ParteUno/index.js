@@ -17,15 +17,17 @@ const User = sequelize.define('User', {
     birthday: DataTypes.DATE,
     profesion: DataTypes.STRING,
     pais: DataTypes.STRING,
+    sexo: DataTypes.BOOLEAN,
 });
 
-await sequelize.sync({ force: true });
+//await sequelize.sync({ force: true });
 console.log('All models were synchronized successfully.');
 const jane = await User.create({
-    username: 'janedoe',
-    birthday: new Date(1980, 6, 20),
+    username: 'RomelCarlof24',
+    birthday: new Date(1988, 2, 24),
     profesion: 'Ingeniero de Sistema',
     pais: 'Pais',
+    sexo: false,
 });
 
 const users = await User.findAll();
