@@ -1,9 +1,5 @@
-const { DataTypes } = require("sequelize");
-const sequelize = require("../../../db/config");
-
-const User = sequelize.define(
-  "usuario",
-  {
+module.exports = (sequelize, DataTypes) => {
+  const Usuario = sequelize.define("usuarios", {
     id: {
       type: DataTypes.INTEGER,
       autoIncrement: true,
@@ -12,7 +8,6 @@ const User = sequelize.define(
     username: {
       type: DataTypes.STRING,
     },
-
     email: {
       type: DataTypes.STRING,
     },
@@ -34,24 +29,18 @@ const User = sequelize.define(
     activo: {
       type: DataTypes.TINYINT,
     },
-
-    fechaCreacion: {
-      type: DataTypes.DATE,
-    },
-    // usuarioModificacion:{
-    //     type:DataTypes.STRING
-    // } int
-    fechaModificacion: {
-      type: DataTypes.DATE,
-    },
     usuarioCreacion: {
       type: DataTypes.INTEGER,
     },
-  },
-  {
-    tableName: "usuario",
-    timestamps: false,
-  }
-);
-
-module.exports = User;
+    fechaCreacion: {
+      type: DataTypes.DATETIME,
+    },
+    usuarioModificacion: {
+      type: DataTypes.INTEGER,
+    },
+    fechaModificacion: {
+      type: DataTypes.DATETIME,
+    },
+  });
+  return Usuario;
+};
