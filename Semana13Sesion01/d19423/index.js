@@ -9,9 +9,9 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.get('/', (req, res) => {
     let query = req.query;
     console.log(query);
-    //res.sendStatus(201);
-    res.send(`Hello World! ${query.nombre}`);
-});
+    res.sendStatus(201);//.sendFile(__dirname +'/uploads/gundam.png')
+    //res.send(`Hello World! ${query.nombre}`)
+  })
 
 app.get('/:id', (req, res) => {
     let params = req.params;
