@@ -20,7 +20,6 @@ const createUser = async(req = request, res = response)=>{
 
 const deleteUser = async (req = request, res = response) => {
     const { id } = req.params;
-    const { among } = req.params;
   
     const existUser = await User.findOne({
       where: {
@@ -30,7 +29,6 @@ const deleteUser = async (req = request, res = response) => {
   
     if (!existUser) {
         console.log(id)
-        console.log(among)
      return res.status(404).send("User not found");
     }
   
