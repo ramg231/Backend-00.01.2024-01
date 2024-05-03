@@ -1,0 +1,308 @@
+{
+	"info": {
+		"_postman_id": "5ec2f866-9924-4468-ac4e-02dcd86c828d",
+		"name": "New Collection",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "4171838"
+	},
+	"item": [
+		{
+			"name": "USERS",
+			"item": [
+				{
+					"name": "ALL USERS",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:3001/api/users/"
+					},
+					"response": []
+				},
+				{
+					"name": "SAVE USER",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Omar\",\r\n    \"email\":\"omar@gmail.com\",\r\n    \"password\": \"1234\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:3001/api/users/"
+					},
+					"response": []
+				},
+				{
+					"name": "FIND BY ID USER",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:3001/api/users/662f0607932bf9ee0c0e9a172"
+					},
+					"response": []
+				},
+				{
+					"name": "DELETE USER",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": "http://localhost:3001/api/users/663030fe69e4224008b1795a"
+					},
+					"response": []
+				},
+				{
+					"name": "UPDATE USER",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Omar 1\",\r\n    \"email\":\"omar1@gmail.com\",\r\n    \"password\": \"1234\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:3001/api/users/6630314b69e4224008b1795d"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "COUPON",
+			"item": [
+				{
+					"name": "ALL",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:3001/api/coupon"
+					},
+					"response": []
+				},
+				{
+					"name": "SAVE",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"code\": \"123\",\r\n     \"discount\": 10\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3001/api/coupon",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"api",
+								"coupon"
+							],
+							"query": [
+								{
+									"key": "code",
+									"value": null,
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UPDATE",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n     \"code\": \"1234\",\r\n    \"discount\": 10\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:3001/api/coupon/662f0bcecda7d3cc5eabb8aa"
+					},
+					"response": []
+				},
+				{
+					"name": "ALL",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:3001/api/course"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "COURSE",
+			"item": [
+				{
+					"name": "SAVE",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"JAVA\",\r\n    \"description\": \"Curso de JAVA\",\r\n    \"image\": \"image.jpg\",\r\n    \"frontPage\": \"frontPage.jpg\",\r\n    \"price\": 100\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:3001/api/course"
+					},
+					"response": []
+				},
+				{
+					"name": "UPDATE",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"NODE JS 1\",\r\n    \"description\": \"Curso de NODE JS\",\r\n    \"image\": \"image.jpg\",\r\n    \"frontPage\": \"frontPage.jpg\",\r\n    \"price\": 100\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:3001/api/course/6630327369e4224008b1796a"
+					},
+					"response": []
+				},
+				{
+					"name": "ALL",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:3001/api/course"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "ORDER",
+			"item": [
+				{
+					"name": "SAVE",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"user\": \"6630314b69e4224008b1795d\",\r\n    \"details\": [\r\n        {\r\n            \"course\": \"6630327369e4224008b1796a\"\r\n        },\r\n        {\r\n            \"course\": \"6630327f69e4224008b1796d\"\r\n        }\r\n    ],\r\n    \"price\": 200\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:3001/api/order"
+					},
+					"response": []
+				},
+				{
+					"name": "FIND BY ID",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:3001/api/order/662fbeb0d3bf5630001431f2"
+					},
+					"response": []
+				},
+				{
+					"name": "ALL",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:3001/api/order"
+					},
+					"response": []
+				},
+				{
+					"name": "DELETE",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": "http://localhost:3001/api/order/662fbeb0d3bf5630001431f2"
+					},
+					"response": []
+				},
+				{
+					"name": "UPDATE",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"user\": \"662fbc895bad538fbc58c1fb\",\r\n    \"details\": [\r\n        {\r\n            \"course\": \"662f0f0c8049a0cf07541a25\"\r\n        }\r\n    ],\r\n    \"coupon\": \"662f0bcecda7d3cc5eabb8aa\",\r\n    \"price\": 220\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:3001/api/order/662fbfa7ffc13ef207d3149b"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "PAYMENT",
+			"item": [
+				{
+					"name": "PAY",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"order\": \"6630338769e4224008b17979\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:3001/api/payment"
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
