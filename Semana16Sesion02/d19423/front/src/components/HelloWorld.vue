@@ -13,32 +13,27 @@
             <div>
                 <label>
                     <span>Correo Electrónico</span>
-                    <input type="text" size="50" data-culqi="card[email]"
-                    id="card[email]" v-model="email" />
+                    <input type="text" size="50" data-culqi="card[email]" id="card[email]" v-model="email" />
                 </label>
             </div>
             <div>
                 <label>
                     <span>Número de tarjeta</span>
-                    <input type="text" size="20" data-culqi="card[number]"
-                    id="card[number]" v-model="creditcard" />
+                    <input type="text" size="20" data-culqi="card[number]" id="card[number]" v-model="creditcard" />
                 </label>
             </div>
             <div>
                 <label>
                     <span>CVV</span>
-                    <input type="text" size="4" data-culqi="card[cvv]"
-                    id="card[cvv]" v-model="cvv" />
+                    <input type="text" size="4" data-culqi="card[cvv]" id="card[cvv]" v-model="cvv" />
                 </label>
             </div>
             <div>
                 <label>
                     <span>Fecha expiración (MM/YYYY)</span>
-                    <input size="2" data-culqi="card[exp_month]"
-                    id="card[exp_month]" v-model="month" />
+                    <input size="2" data-culqi="card[exp_month]" id="card[exp_month]" v-model="month" />
                     <span>/</span>
-                    <input size="4" data-culqi="card[exp_year]" id="card[exp_year]"
-                    v-model="year" />
+                    <input size="4" data-culqi="card[exp_year]" id="card[exp_year]" v-model="year" />
                 </label>
             </div>
             <div>
@@ -53,8 +48,8 @@
 import axios from 'axios';
 
 export default {
-  name: 'HelloWorld',
-  data() {
+    name: 'HelloWorld',
+    data() {
         return {
             order_id: 123,
             description: 'PRODUCTO ABC',
@@ -109,8 +104,10 @@ export default {
                     headers: {
                         'content-type': 'application/json',
                     },
+                }).then(respuesta =>{
+                    console.log(respuesta);
                 });
-                console.log(response.data);
+                
             } else {
                 console.log(_Culqi.error);
             }
