@@ -27,20 +27,25 @@ const createMessage = async (req = request, res = response) => {
   };
 
 
-  const createMessage2 = async (req = request, res = response) => {
+  const createMessage2 = async (from,to,message) => {
     try {
 
-      const newMessage = await MessageModel.create(data);
+      const newMessage = await MessageModel.create({
+        "from":`${from}`,
+        "to":`${to}`,
+        "message":`${message}`,
+        "date":"10-02-03"
+      });
   
       newMessage.save();
-      
+
     } catch (err) {
       console.log(err)
     }
   };
 
-
   module.exports = {
     createMessage,
-    deleteOneMessage
+    deleteOneMessage,
+    createMessage2
   };
