@@ -84,11 +84,9 @@ export default {
             });
         },
         async payment() {
-            const resultado = await this.getToken();
-            if (resultado) {
-                // ¡Objeto Token creado exitosamente!
+            await this.getToken().then(resultado => {
                 const token = resultado.id;
-                const response = await axios({
+                const data = axios({
                     method: 'post',
                     url: 'http://localhost:8000/api/process/pay', // YOUR BACKEND
                     data: {
@@ -104,13 +102,10 @@ export default {
                     headers: {
                         'content-type': 'application/json',
                     },
-                }).then(respuesta =>{
+                }).then(respuesta => {
                     console.log(respuesta);
                 });
-                
-            } else {
-                console.log(_Culqi.error);
-            }
+            });
         },
     },
 };
