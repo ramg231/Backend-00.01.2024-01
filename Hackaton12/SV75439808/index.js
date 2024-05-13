@@ -61,37 +61,70 @@ http
           // Guardamos la lista actualizada en el archivo JSON
           saveSales(listSales);
 
-          res.writeHead(201, { 'Content-type': 'application/json' });
+          res.writeHead(200, { 'Content-type': 'application/json' });
           return res.end(JSON.stringify(listSales));
         }
       });
     } else if (req.method === 'GET' && path === '/salesComplete') {
       const completedSales = listSales.filter((sale) => sale.isComplete);
+      fs.readFile('salesComplete.html', 'utf8', (err, data) => {
+        if (err) {
+          res.writeHead(500, { 'Content-Type': 'text/plain' });
+          return res.end('Error interno del servidor');
+        }
 
-      fs.readFile('salesComplete.html', (err, data) => {
-        res.writeHead(201, { 'Content-Type': 'text/html; charset=utf-8' });
-        return res.end(JSON.stringify(completedSales));
+        const htmlContent = data.replace(
+          '<!-- completedSalesList -->',
+          `<ul>${completedSales
+            .map((sale) => `<li>${sale.name} - ${sale.description}</li>`)
+            .join('')}</ul>`
+        );
+
+        res.writeHead(200, { 'Content-Type': 'text/html; charset=utf-8' });
+        res.end(htmlContent);
       });
     } else if (req.method === 'GET' && path === '/salesPending') {
       const pendingSales = listSales.filter((sale) => !sale.isComplete);
+      fs.readFile('salesPending.html', 'utf8', (err, data) => {
+        if (err) {
+          res.writeHead(500, { 'Content-Type': 'text/plain' });
+          return res.end('Error interno del servidor');
+        }
 
-      fs.readFile('salesPending.html', (err, data) => {
-        res.writeHead(201, { 'Content-Type': 'text/html; charset=utf-8' });
-        return res.end(JSON.stringify(pendingSales));
+        const htmlContent = data.replace(
+          '<!-- pendingSalesList -->',
+          `<ul>${pendingSales
+            .map((sale) => `<li>${sale.name} - ${sale.description}</li>`)
+            .join('')}</ul>`
+        );
+        res.writeHead(200, { 'Content-Type': 'text/html; charset=utf-8' });
+        res.end(htmlContent);
       });
     } else if (req.method === 'GET' && path === '/create') {
       fs.readFile('create.html', (err, data) => {
-        res.writeHead(201, { 'Content-Type': 'text/html; charset=utf-8' });
+        if (err) {
+          res.writeHead(500, { 'Content-Type': 'text/plain' });
+          return res.end('Error interno del servidor');
+        }
+        res.writeHead(200, { 'Content-Type': 'text/html; charset=utf-8' });
         res.end(data);
       });
     } else if (req.method === 'GET' && path === '/menu') {
       fs.readFile('menu.html', (err, data) => {
-        res.writeHead(201, { 'Content-Type': 'text/html; charset=utf-8' });
+        if (err) {
+          res.writeHead(500, { 'Content-Type': 'text/plain' });
+          return res.end('Error interno del servidor');
+        }
+        res.writeHead(200, { 'Content-Type': 'text/html; charset=utf-8' });
         res.end(data);
       });
     } else if (req.method === 'GET' && path === '/') {
       fs.readFile('index.html', (err, data) => {
-        res.writeHead(201, { 'Content-Type': 'text/html; charset=utf-8' });
+        if (err) {
+          res.writeHead(500, { 'Content-Type': 'text/plain' });
+          return res.end('Error interno del servidor');
+        }
+        res.writeHead(200, { 'Content-Type': 'text/html; charset=utf-8' });
         res.end(data);
       });
     } else {

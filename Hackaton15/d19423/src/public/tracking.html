@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<!--
+ @license
+ Copyright 2019 Google LLC. All Rights Reserved.
+ SPDX-License-Identifier: Apache-2.0
+-->
+<html>
+  <head>
+    <title>Displaying Text Directions With setPanel()</title>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+    <script>
+      /**
+       * @license
+       * Copyright 2019 Google LLC. All Rights Reserved.
+       * SPDX-License-Identifier: Apache-2.0
+       */
+      function initMap() {
+
+
+
+
+        const directionsRenderer = new google.maps.DirectionsRenderer();
+        const directionsService = new google.maps.DirectionsService();
+        const map = new google.maps.Map(document.getElementById("map"), {
+          zoom: 7,
+          center: { lat: 41.85, lng: -87.65 },
+          disableDefaultUI: true,
+        });
+
+        directionsRenderer.setMap(map);
+        directionsRenderer.setPanel(document.getElementById("sidebar"));
+
+        const control = document.getElementById("floating-panel");
+
+        map.controls[google.maps.ControlPosition.TOP_CENTER].push(control);
+
+        const onChangeHandler = function () {
+          calculateAndDisplayRoute(directionsService, directionsRenderer);
+        };
+
+		const onChangeHandlerALT = function () {
+          calculateAndDisplayRouteALT(directionsService, directionsRenderer);
+        };
+
+        document
+          .getElementById("start")
+          .addEventListener("change", onChangeHandler);
+        document
+          .getElementById("end")
+          .addEventListener("change", onChangeHandler);
+        document
+          .getElementById("mode")
+          .addEventListener("change", onChangeHandler);
+		document
+          .getElementById("inicio")
+          .addEventListener("click", onChangeHandlerALT);
+		  
+      }
+
+
+      function calculateAndDisplayRoute(directionsService, directionsRenderer) {
+        const start = document.getElementById("start").value;
+        const end = document.getElementById("end").value;
+        const selectedMode = document.getElementById("mode").value;
+
+        directionsService
+          .route({
+            origin: start,
+            destination: end,
+            travelMode: google.maps.TravelMode[selectedMode],
+          })
+          .then((response) => {
+            directionsRenderer.setDirections(response);
+          })
+          .catch((e) =>
+            window.alert("Directions request failed due to " + status)
+          );
+      }
+
+	  
+function calculateAndDisplayRouteALT(directionsService, directionsRenderer) {
+
+let data = getUrlParameter("data");
+let paquete =JSON.parse( JSON.parse( data).msg);
+
+        const start = paquete.envio
+        const end =  paquete.entrega
+
+        const selectedMode = "DRIVING"
+
+        directionsService
+          .route({
+            origin: start,
+            destination: end,
+            travelMode: google.maps.TravelMode[selectedMode],
+          })
+          .then((response) => {
+            directionsRenderer.setDirections(response);
+          })
+          .catch((e) =>
+            window.alert("Directions request failed due to " + status)
+          );
+      }
+	  var getUrlParameter = function getUrlParameter(sParam) {
+    var sPageURL = window.location.search.substring(1),
+        sURLVariables = sPageURL.split('&'),
+        sParameterName,
+        i;
+
+    for (i = 0; i < sURLVariables.length; i++) {
+        sParameterName = sURLVariables[i].split('=');
+
+        if (sParameterName[0] === sParam) {
+            return sParameterName[1] === undefined ? true : decodeURIComponent(sParameterName[1]);
+        }
+    }
+    return false;
+};
+
+    
+      window.initMap = initMap;
+    </script>
+    <style>
+      /**
+       * @license
+       * Copyright 2019 Google LLC. All Rights Reserved.
+       * SPDX-License-Identifier: Apache-2.0
+       */
+      /* Optional: Makes the sample page fill the window. */
+      html,
+      body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+      }
+
+      #container {
+        height: 100%;
+        display: flex;
+      }
+
+      #sidebar {
+        flex-basis: 15rem;
+        flex-grow: 1;
+        padding: 1rem;
+        max-width: 30rem;
+        height: 100%;
+        box-sizing: border-box;
+        overflow: auto;
+      }
+
+      #map {
+        flex-basis: 0;
+        flex-grow: 4;
+        height: 100%;
+      }
+
+      #floating-panel {
+        position: absolute;
+        top: 10px;
+        left: 25%;
+        z-index: 5;
+        background-color: #fff;
+        padding: 5px;
+        border: 1px solid #999;
+        text-align: center;
+        font-family: "Roboto", "sans-serif";
+        line-height: 30px;
+        padding-left: 10px;
+      }
+
+      #floating-panel {
+        background-color: #fff;
+        border: 0;
+        border-radius: 2px;
+        box-shadow: 0 1px 4px -1px rgba(0, 0, 0, 0.3);
+        margin: 10px;
+        padding: 0 0.5em;
+        font: 400 18px Roboto, Arial, sans-serif;
+        overflow: hidden;
+        padding: 5px;
+        font-size: 14px;
+        text-align: center;
+        line-height: 30px;
+        height: auto;
+      }
+
+      #map {
+        flex: auto;
+      }
+
+      #sidebar {
+        flex: 0 1 auto;
+        padding: 0;
+      }
+      #sidebar > div {
+        padding: 0.5rem;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="floating-panel">
+      <strong>Start:</strong>
+      <select id="start">
+        <option value="chicago, il">Chicago</option>
+        <option value="st louis, mo">St Louis</option>
+        <option value="joplin, mo">Joplin, MO</option>
+        <option value="oklahoma city, ok">Oklahoma City</option>
+        <option value="amarillo, tx">Amarillo</option>
+        <option value="gallup, nm">Gallup, NM</option>
+        <option value="flagstaff, az">Flagstaff, AZ</option>
+        <option value="winona, az">Winona</option>
+        <option value="kingman, az">Kingman</option>
+        <option value="barstow, ca">Barstow</option>
+        <option value="san bernardino, ca">San Bernardino</option>
+        <option value="los angeles, ca">Los Angeles</option>
+      </select>
+      <br />
+      <strong>End:</strong>
+      <select id="end">
+        <option value="chicago, il">Chicago</option>
+        <option value="st louis, mo">St Louis</option>
+        <option value="joplin, mo">Joplin, MO</option>
+        <option value="oklahoma city, ok">Oklahoma City</option>
+        <option value="amarillo, tx">Amarillo</option>
+        <option value="gallup, nm">Gallup, NM</option>
+        <option value="flagstaff, az">Flagstaff, AZ</option>
+        <option value="winona, az">Winona</option>
+        <option value="kingman, az">Kingman</option>
+        <option value="barstow, ca">Barstow</option>
+        <option value="san bernardino, ca">San Bernardino</option>
+        <option value="los angeles, ca">Los Angeles</option>
+      </select>
+      <br />
+	  <button id="inicio">Inicio</button>
+	  <br>
+      <b>Mode of Travel: </b>
+      <select id="mode">
+        <option value="DRIVING">Driving</option>
+        <option value="WALKING">Walking</option>
+        <option value="BICYCLING">Bicycling</option>
+        <option value="TRANSIT">Transit</option>
+      </select>
+    </div>
+    <div id="container">
+      <div id="map"></div>
+      <div id="sidebar"></div>
+    </div>
+	
+    <div style="display: none">
+      <div id="floating-panel">
+		
+        <strong>Start:</strong>
+        <select id="start">
+          <option value="chicago, il">Chicago</option>
+          <option value="st louis, mo">St Louis</option>
+          <option value="joplin, mo">Joplin, MO</option>
+          <option value="oklahoma city, ok">Oklahoma City</option>
+          <option value="amarillo, tx">Amarillo</option>
+          <option value="gallup, nm">Gallup, NM</option>
+          <option value="flagstaff, az">Flagstaff, AZ</option>
+          <option value="winona, az">Winona</option>
+          <option value="kingman, az">Kingman</option>
+          <option value="barstow, ca">Barstow</option>
+          <option value="san bernardino, ca">San Bernardino</option>
+          <option value="los angeles, ca">Los Angeles</option>
+        </select>
+        <br />
+		<button id="inicio">Inicio</button>
+		<br/>
+        <strong>End:</strong>
+        <select id="end">
+          <option value="chicago, il">Chicago</option>
+          <option value="st louis, mo">St Louis</option>
+          <option value="joplin, mo">Joplin, MO</option>
+          <option value="oklahoma city, ok">Oklahoma City</option>
+          <option value="amarillo, tx">Amarillo</option>
+          <option value="gallup, nm">Gallup, NM</option>
+          <option value="flagstaff, az">Flagstaff, AZ</option>
+          <option value="winona, az">Winona</option>
+          <option value="kingman, az">Kingman</option>
+          <option value="barstow, ca">Barstow</option>
+          <option value="san bernardino, ca">San Bernardino</option>
+          <option value="los angeles, ca">Los Angeles</option>
+        </select>
+      </div>
+    </div>
+    <script
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBnrzgn5EKpuJs8SFsla-aWgKfDJh02zq4&callback=initMap&v=weekly&solution_channel=GMP_CCS_textdirections_v1"
+      defer
+    ></script>
+	<script src="/js/jquery.js" > </script>
+	<script src="/socket.io/socket.io.js" > </script>
+	<script>
+
+		$(function () {
+	
+			var socket = io.connect();
+			var message = $('#message');
+			var messageForm = $('#messageForm');
+			var chat = $('#chat');
+			var username = $('#username');
+			var user ;
+	
+	//        username.text('prashant');
+	
+			var initial = 0;
+	//================initilize message=======
+			socket.emit('username' , "prashant");
+			socket.emit('initial-messages' , "initial");
+	//========================================
+			messageForm.submit(function (data) {
+			   data.preventDefault();
+			   socket.emit('send-message' , message.val(), username.html());
+				$('input').val('');
+			});
+			socket.on('new-message' , function (data) {
+				if(data.username === user) {
+					chat.append('<li > <div class="msj-rta macro"> <div class="text text-l">' + data.msg + '</div></div></li>');
+				}else {
+					chat.append('<li > <div class="msj macro"> <div class="text text-r">'+data.username+'  :  ' + data.msg + '</div></div></li>');
+				}
+				$('.chat').scrollTop($("ul.chat").prop('scrollHeight'));
+			});
+			socket.on('initial-message' , function (data) {
+				if(initial === 0) {
+					var arr = $.parseJSON(data.msg);
+					for (var i = 0; i < arr.length; i++) {
+						if(arr[i].user === user) {
+							chat.append('<li > <div class="msj-rta macro"> <div class="text text-l">' + arr[i].message + '</div></div></li>');
+						}else {
+							chat.append('<li > <div class="msj macro"> <div class="text text-r">' +arr[i].user +'  :   '+ arr[i].message + '</div></div></li>');
+						}
+	
+					}
+					$('.chat').scrollTop($("ul.chat").prop('scrollHeight'));
+					initial++;
+				}
+			});
+			socket.on('username' , function (data) {
+				username.text(data.username);
+				user = data.username;
+			});
+			socket.on('typing' , function (data) {
+				console.log(data)
+				$('.status').html(data.msg);
+			});
+			$('#message').focus( function () {
+				socket.emit('typing', user + ' is typing...');
+			});
+			$('#message').focusout( function () {
+				socket.emit('typing', '');
+			});
+		});
+	</script>
+  </body>
+</html>
+
+	
+   

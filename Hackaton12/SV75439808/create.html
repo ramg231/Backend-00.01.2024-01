@@ -10,23 +10,50 @@
       integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
       crossorigin="anonymous"
     />
+    <style>
+      body {
+        margin: 0;
+        top: 0;
+        background-color: #f9f9f9;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex-line-pack: center;
+        align-content: center;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+        min-height: 100vh;
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+        font-family: 'Raleway';
+      }
+      textarea {
+        padding-right: 21px;
+      }
+    </style>
   </head>
   <body>
-    <a href="/menu" class="btn btn-primary">< Menu</a><br><br>
-    <h1>Agregar Venta</h1>
     <form action="/create" method="POST" class="">
-      <label for="name">Nombre:</label>
-      <input type="text" id="name" name="name" />
-      <label for="description">Descripción:</label>
-      <textarea id="description" name="description"></textarea>
-      <label for="date">Fecha:</label>
-      <input type="date" id="date" name="date" />
-      <label for="completed">Completado:</label>
+      <h1>Agregar Venta</h1>
+      <label for="name">Nombre:</label><br />
+      <input type="text" id="name" name="name" /><br />
+      <label for="description">Descripción:</label><br />
+      <textarea id="description" name="description"></textarea><br />
+      <label for="date">Fecha:</label><br />
+      <input type="date" id="date" name="date" class="mb-2" /><br />
+      <label for="completed">Completado:</label><br />
       <input type="radio" name="completed" value="true" />
-      <label for="completed-yes">Sí</label>
+      <label for="completed-yes">Sí</label><br />
       <input type="radio" name="completed" value="false" />
-      <label for="completed-no">No</label><br><br>
-      <input class="btn btn-success" type="submit" value="Enviar" />
+      <label for="completed-no">No</label><br /><br />
+      <div class="d-flex justify-content-between">
+        <a href="/menu" class="btn btn-primary">Menu</a>
+        <input class="btn btn-success" type="submit" value="Agregar venta" />
+      </div>
     </form>
   </body>
 </html>
