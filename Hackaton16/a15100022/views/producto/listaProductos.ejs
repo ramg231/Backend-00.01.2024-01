@@ -1,0 +1,12 @@
+<!-- views/producto/listaProductos.ejs -->
+
+<h1>Lista de Productos</h1>
+
+<% productos.forEach(producto => { %>
+  <div>
+    <h2><%= producto.nombre %></h2>
+    <p>Precio: <%= producto.precio %></p>
+    <!-- Otros detalles del producto -->
+    <a href="/producto/<%= producto._id %>">Ver Detalles</a>
+  </div>
+<% }); %>
