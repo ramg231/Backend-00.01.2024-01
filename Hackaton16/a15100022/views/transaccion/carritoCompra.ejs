@@ -1,0 +1,11 @@
+<!-- views/transaccion/carritoCompra.ejs -->
+
+<h1>Carrito de Compra</h1>
+
+<% transacciones.forEach(transaccion => { %>
+  <div>
+    <h2>Transacción <%= transaccion._id %></h2>
+    <!-- Detalles de la transacción -->
+    <a href="/transaccion/<%= transaccion._id %>">Ver Detalles</a>
+  </div>
+<% }); %>
