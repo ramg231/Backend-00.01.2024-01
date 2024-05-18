@@ -1,0 +1,23 @@
+{
+  "name": "mi-api",
+  "version": "1.0.0",
+  "description": "tarea",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "start": "node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "node",
+    "javascript",
+    "mongoose",
+    "docker."
+  ],
+  "author": "Gina",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.19.2",
+    "mongoose": "^8.4.0"
+  }
+}
