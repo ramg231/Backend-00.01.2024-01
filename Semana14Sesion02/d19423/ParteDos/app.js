@@ -18,6 +18,8 @@ app.use(express.static("public"));
 io.on("connection", (socket) => {
     console.log("New user connected");
     const conversationHistory = [];
+    
+    //cuando el servidor recibe el mensaje desde el cliente
     socket.on("sendMessage", async (message, callback) => {
         try {
             // Add the user message to the conversation history
@@ -33,6 +35,7 @@ io.on("connection", (socket) => {
             // Add the assistant's response to the conversation history
             conversationHistory.push({ role: "assistant", content: response });
 
+            //el mensaje responde el asistente al cliente y se ve en el servidor
             socket.emit("message", response);
             callback();
         } catch (error) {

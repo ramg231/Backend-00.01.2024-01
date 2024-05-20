@@ -7,41 +7,42 @@ const Role = db.role;
 
 
 exports.signup = (req, res) => {
-    const user = new User({
+  const user = new User({
       username: req.body.username,
       email: req.body.email,
       password: bcrypt.hashSync(req.body.password, 8),
-    });
+  });
   
-    user.save((err, user) => {
-      if (err) {
-        res.status(500).send({ message: err });
-        return;
-      }
+  user.save((err, user) => {
+    if (err) {
+      res.status(500).send({ message: err });
+      return;
+    }
   
-      if (req.body.roles) {
-        Role.find(
-          {
-            name: { $in: req.body.roles },
-          },
+    if (req.body.roles) {
+      Role.find(
+        {
+          name: { $in: req.body.roles },
+        },
           (err, roles) => {
-            if (err) {
+           if (err) {
               res.status(500).send({ message: err });
               return;
-            }
+          }
   
-            user.roles = roles.map((role) => role._id);
-            user.save((err) => {
-              if (err) {
+          user.roles = roles.map((role) => role._id);
+          user.save((err) => {
+            if (err) {
                 res.status(500).send({ message: err });
                 return;
-              }
+            }
   
               res.send({ message: "User was registered successfully!" });
-            });
-          }
-        );
-      } else {
+          });
+        }
+      );
+    } //se le crea user como rol predeterminado
+      else {
         Role.findOne({ name: "user" }, (err, role) => {
           if (err) {
             res.status(500).send({ message: err });
@@ -62,7 +63,7 @@ exports.signup = (req, res) => {
     });
   };
   
-  exports.signin = (req, res) => {
+exports.signin = (req, res) => {
     User.findOne({
       username: req.body.username,
     })
@@ -77,6 +78,7 @@ exports.signup = (req, res) => {
           return res.status(404).send({ message: "User Not found." });
         }
   
+        //validacion del password
         var passwordIsValid = bcrypt.compareSync(
           req.body.password,
           user.password
@@ -110,7 +112,8 @@ exports.signup = (req, res) => {
         });
       });
   };
-  exports.signout = async (req, res) => {
+
+exports.signout = async (req, res) => {
     try {
       req.session = null;
       return res.status(200).send({ message: "You've been signed out!" });
