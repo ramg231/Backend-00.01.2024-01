@@ -4,10 +4,6 @@ const User = require('../models/User');
 const createUser = async (req, res) => {
   try {
     const { firstName, lastName, email, password } = req.body;
-    // Aquí puedes realizar la validación de los datos recibidos, por ejemplo:
-    // if (!firstName || !lastName || !email || !password) {
-    //   return res.status(400).json({ message: 'Por favor, proporcione todos los campos.' });
-    // }
     
     const newUser = await User.create({ firstName, lastName, email, password });
     return res.status(201).json(newUser);
