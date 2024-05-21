@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css"
+      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+      crossorigin="anonymous"
+    />
+    <title>Formulario de Reparación</title>
+  </head>
+
+  <body>
+    <form id="formularioReparacion">
+      <h2>Formulario de Reparación</h2>
+      <label for="nombreCliente">Nombre del Cliente:</label>
+      <input type="text" id="nombreCliente" name="nombreCliente" required />
+
+      <label for="Modelo">Modelo:</label>
+      <input type="text" id="Modelo" name="modelo" required />
+
+      <label for="numeroSerieEquipo">Número de Serie del Equipo:</label>
+      <input
+        type="text"
+        id="numeroSerieEquipo"
+        name="numeroSerieEquipo"
+        required
+      />
+      <br />
+      <button
+        style="margin-top: 10px"
+        type="button"
+        class="btn btn-primary"
+        onclick="generarNumeroSerie()"
+      >
+        Generar</button
+      ><br />
+
+      <label for="imei">IMEI:</label>
+      <input type="text" id="imei" name="imei" required />
+
+     <div style="display: flex; margin-top: 10px;     justify-content: space-between;">
+        <button
+       
+        type="button"
+        class="btn btn-primary"
+        onclick="generarImei()"
+      >
+        Generar</button
+      >
+
+      <button type="button" class="btn btn-primary" onclick="validar()">
+        Validar y Continuar
+      </button>
+      <button type="button" class="cancel btn btn-danger" onclick="cancelar()">
+        Cancelar
+      </button>
+     </div>
+    </form>
+
+    <br /><br />
+    <table id="registros" border="1" class="table table-dark">
+      <tr>
+        <th>Cliente</th>
+        <th>Modelo</th>
+        <th>Nº de serie</th>
+        <th>IMEI</th>
+        <th>Fecha y Hora</th>
+        <th>Autorizacion</th>
+        <th>Abono 50%</th>
+        <th onclick="editarCampo('Diagnostico')">
+          Diagnostico 
+        </th>
+        <th onclick="editarCampo('Estado')">Estado</th>
+        <th>Asignar tecnico</th>
+      </tr>
+    </table>
+
+    <script src="js/script.js"></script>
+  </body>
+</html>
