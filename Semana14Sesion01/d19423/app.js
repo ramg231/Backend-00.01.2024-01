@@ -43,6 +43,7 @@ app.get('/pagina/', function (req, res) {
     });
 });
 
+
 // Cuando llega un request por sockets validamos el origen
 // En caso de origen permitido, recibimos el mensaje y lo mandamos
 // de regreso al cliente
@@ -102,6 +103,7 @@ wsServer.on("request", (request) => {
                 const req = http.request(options, function (res) {
                     const chunks = [];
                 
+                    //cada que ejecuta el evento data osea si recibe datos  
                     res.on('data', function (chunk) {
                         chunks.push(chunk);
                     });
@@ -111,7 +113,7 @@ wsServer.on("request", (request) => {
                         connection.sendUTF(body.toString());
                     });
                 });
-                
+    
                 req.end();
                 break;
             default:

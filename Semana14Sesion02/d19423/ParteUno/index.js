@@ -23,9 +23,11 @@ app.get('/', (req, res) => {
     res.sendFile(join(__dirname, 'index.html'));
 });
 
+//cuando un cliente se conecta
 io.on('connection', (socket) => {
     console.log('a user connected');
     socket.broadcast.emit('hi');
+    //cuando el servidor recibe un mensaje
     socket.on('chat message', (msg) => {
         if(msg == "cine"){
             const req = https.request(options, function (res) {
@@ -38,7 +40,7 @@ io.on('connection', (socket) => {
                 res.on('end', function () {
                     const body = Buffer.concat(chunks);
                     let jsonData = JSON.parse(body.toString()).results;
-                    console.log(jsonData);
+                    //console.log(jsonData);
                     // Mostrar solo los títulos de las películas y la fecha de estreno
                     arrRespuesta = [];
                     for (let i=0;i<jsonData.length;i++){
@@ -52,15 +54,17 @@ io.on('connection', (socket) => {
                         arrRespuesta.push(info);
                         
                     }
-                    console.log(arrRespuesta);
-                    io.emit("chat message",JSON.stringify( arrRespuesta));
+                    //console.log(arrRespuesta);
+                    io.emit("chat message",JSON.stringify(arrRespuesta));
                 });
             });
             req.end();
         }
+        //envia mensaje a todos
         io.emit('chat message', msg);
         console.log('message: ' + msg);
     });
+    //cuando un cliente se desconecta
     socket.on('disconnect', () => {
         console.log('user disconnected');
     });
