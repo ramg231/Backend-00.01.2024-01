@@ -1,0 +1,211 @@
+<!--
+	* Created by Prashant on 14-07-2019.
+	* https://github.com/psachan190
+	* https://www.linkedin.com/in/psachan190
+-->
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Recoger</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css" />
+    <link href="styles/chat.css" rel="stylesheet" />
+  </head>
+  <style>
+	h1{
+		text-align: center;
+	}
+	form{
+		padding: 20px;
+		border-radius: 10px;
+		background: rgb(245 245 245);
+	}
+  </style>
+  <body>
+    <nav class="navbar navbar-default">
+      <div class="container-fluid">
+        <div class="navbar-header"><div id="username" style="display: none;"></div></div>
+        <ul class="nav navbar-nav">
+          <li class="active"><a href="/logout">Salir</a></li>
+        </ul>
+      </div>
+    </nav>
+    <div class="container">
+      <div class="col-sm-12 ">
+        <form class="form-horizontal" id="formRecoger">
+          <fieldset>
+            <!-- Form Name -->
+            <h1>Nuevo Envio</h1>
+
+            <!-- Text input-->
+            <div class="form-group">
+              <label class="col-md-12 control-label" for="textinput"
+                >Detalle del Producto</label
+              >
+              <div class="col-md-12">
+                <input
+                  id="producto"
+                  name="textinput"
+                  type="text"
+                  
+                  class="form-control input-md"
+                />
+              </div>
+            </div>
+
+            <!-- Text input-->
+            <div class="form-group">
+              <label class="col-md-12 control-label" for="textinput"
+                >Direccion de Envio</label
+              >
+              <div class="col-md-12">
+                <input
+                  id="entrega"
+                  name="textinput"
+                  type="text"
+                  
+                  class="form-control input-md"
+                />
+              </div>
+            </div>
+
+            <!-- Text input-->
+            <div class="form-group">
+              <label class="col-md-12 control-label" for="textinput"
+                >Direccion de Entrega</label
+              >
+              <div class="col-md-12">
+                <input
+                  id="envio"
+                  name="textinput"
+                  type="text"
+                  
+                  class="form-control input-md"
+                />
+              </div>
+            </div>
+
+            <!-- Text input-->
+            <div class="form-group">
+              <label class="col-md-12 control-label" for="textinput"
+                >Kilos</label
+              >
+              <div class="col-md-12">
+                <input
+                  id="kilos"
+                  name="textinput"
+                  type="text"
+                  
+                  class="form-control input-md"
+                />
+              </div>
+            </div>
+            <div class="form-group col-md-12">
+              <button class="btn btn-primary btn-block login" type="submit">
+                Enviar
+              </button>
+            </div>
+          </fieldset>
+        </form>
+      </div>
+    </div>
+    <script src="/js/jquery.js"></script>
+    <script src="/socket.io/socket.io.js"></script>
+
+    <script>
+      $(function () {
+        var socket = io.connect();
+        var message = $("#message");
+        var formRecoger = $("#formRecoger");
+        var chat = $("#chat");
+        var username = $("#username");
+        var user;
+
+        //        username.text('prashant');
+
+        var initial = 0;
+        //================initilize message=======
+        socket.emit("username", "prashant");
+        socket.emit("initial-messages", "initial");
+        //========================================
+        formRecoger.submit(function (data) {
+          data.preventDefault();
+
+          let objPaquete = {
+            envio: $("#envio").val(),
+            entrega: $("#entrega").val(),
+            producto: $("#producto").val(),
+            kilos: $("#kilos").val(),
+          };
+          console.log(objPaquete);
+          socket.emit(
+            "recoger-paquete",
+            JSON.stringify(objPaquete),
+            username.html()
+          );
+          //$('input').val('');
+        });
+        socket.on("tracking", function (data) {
+          if (data.username === user) {
+            window.location = "/tracking.html?data=" + JSON.stringify(data);
+          }
+        });
+        socket.on("new-message", function (data) {
+          if (data.username === user) {
+            chat.append(
+              '<li > <div class="msj-rta macro"> <div class="text text-l">' +
+                data.msg +
+                "</div></div></li>"
+            );
+          } else {
+            chat.append(
+              '<li > <div class="msj macro"> <div class="text text-r">' +
+                data.username +
+                "  :  " +
+                data.msg +
+                "</div></div></li>"
+            );
+          }
+          $(".chat").scrollTop($("ul.chat").prop("scrollHeight"));
+        });
+        socket.on("initial-message", function (data) {
+          if (initial === 0) {
+            var arr = $.parseJSON(data.msg);
+            for (var i = 0; i < arr.length; i++) {
+              if (arr[i].user === user) {
+                chat.append(
+                  '<li > <div class="msj-rta macro"> <div class="text text-l">' +
+                    arr[i].message +
+                    "</div></div></li>"
+                );
+              } else {
+                chat.append(
+                  '<li > <div class="msj macro"> <div class="text text-r">' +
+                    arr[i].user +
+                    "  :   " +
+                    arr[i].message +
+                    "</div></div></li>"
+                );
+              }
+            }
+            $(".chat").scrollTop($("ul.chat").prop("scrollHeight"));
+            initial++;
+          }
+        });
+        socket.on("username", function (data) {
+          username.text(data.username);
+          user = data.username;
+        });
+        socket.on("typing", function (data) {
+          console.log(data);
+          $(".status").html(data.msg);
+        });
+        $("#message").focus(function () {
+          socket.emit("typing", user + " is typing...");
+        });
+        $("#message").focusout(function () {
+          socket.emit("typing", "");
+        });
+      });
+    </script>
+  </body>
+</html>

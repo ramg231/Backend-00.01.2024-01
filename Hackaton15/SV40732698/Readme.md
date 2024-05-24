@@ -1,0 +1,1 @@
+Se trabajo con google cloud oauth en la bd es la Tabla login, para los mensajes message, para ordenes nuevas order_amazon y tracking order_amazon_tracking se uso los proyectos de clase como ejemplo
