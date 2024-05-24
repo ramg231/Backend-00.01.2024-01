@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+    
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat con Socket IO</title>
+    
+</head>
+<body>
+    <h1>Hola, bienvenido al chat</h1>
+
+    <ul id="messages"></ul>
+ 
+    <form id="form" action="">
+      
+      <label for="username">Usuario</label>
+      <input id="username" /><br>
+      <label for="mensaje">Mensaje</label>
+      <input id="mensaje" autocomplete="off" /><br>
+      <label for="to">Dirigido hacia</label>
+      <input id="to" /><br>
+ 
+      <button>Enviar</button>
+    </form>
+    
+    <script src = "https://cdn.socket.io/4.5.4/socket.io.min.js"></script>
+
+    <script src = "../modules/entity.js"></script>
+
+    <script>
+        const socket = io();
+   
+        const messages = document.getElementById("messages");
+        const form = document.getElementById("form");
+   
+        const mensaje = document.getElementById("mensaje");
+        const username = document.getElementById("username");
+        const to = document.getElementById("to");
+   
+        form.addEventListener("submit", (e) => {
+          e.preventDefault();
+   
+          console.log({
+            from: username.value,
+            to: to.value,
+            message: mensaje.value,
+          });
+   
+          if (mensaje.value) {
+            const item = document.createElement("li");
+            item.textContent = `${username.value}: ${mensaje.value}`;
+            messages.appendChild(item);
+            socket.emit("chat message", {
+              from: username.value,
+              to: to.value,
+              message: mensaje.value,
+            });
+
+            try {
+
+const newMessage = MessageModel.create({
+  "from":`${from}`,
+  "to":`${to}`,
+  "message":`${message}`,
+  "date":"10-02-03"
+});
+
+newMessage.save();
+
+} catch (err) {
+console.log(err)
+}
+   
+              mensaje.value = "";
+          }
+        });
+   
+        socket.on("chat message", (msg) => {
+          console.log(msg);
+          console.log({ to: to.value, form: username.value });
+          if (msg.to == username.value && msg.from == to.value) {
+            const item = document.createElement("li");
+            item.textContent = `${msg.from}: ${msg.message}`;
+            messages.appendChild(item);
+            window.scrollTo(0, document.body.scrollHeight);
+          }
+        });
+      </script>
+</body>
+</html>

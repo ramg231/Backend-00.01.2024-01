@@ -1,0 +1,27 @@
+{
+  "name": "mi-proyecto-nodejs",
+  "version": "0.1.0",
+  "description": "Una aplicación web para gestionar tareas y recordatorios. Permite a los usuarios crear, editar y eliminar tareas, así como establecer recordatorios para tareas específicas. La aplicación también ofrece funciones de filtrado y búsqueda para facilitar la organización y el seguimiento de las tareas pendientes.",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest",
+    "start": "node ./bin/www"
+  },
+  "keywords": [],
+  "author": "RomelCarlof",
+  "license": " MIT",
+  "dependencies": {
+    "express": "^4.19.2"
+  },
+  "devDependencies": {
+    "jest": "^29.7.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RomelCarlof/Backend-00.01.2024-01.git"
+  },
+  "bugs": {
+    "url": "https://github.com/RomelCarlof/Backend-00.01.2024-01/issues"
+  },
+  "homepage": "https://github.com/RomelCarlof/Backend-00.01.2024-01#readme"
+}

@@ -16,7 +16,7 @@ messageForm.addEventListener("submit", (e) => {
 
     const message = messageInput.value;
     displayMessage("user", message); // Display user's message in the chat
-
+    //mensaje que el usuario manda al servidor
     socket.emit("sendMessage", message, (error) => {
         if (error) {
             return alert(error);

@@ -81,7 +81,11 @@
                 socket.emit('chat message', input.value);
                 input.value = '';
             }
+            else{
+                alert("NO HAY MENSAJE");
+            }
         });
+        
         socket.on('chat message', (msg) => {
             const item = document.createElement('li');
             item.textContent = msg;

@@ -1,0 +1,28 @@
+const { Sequelize, Model, DataTypes } = require('sequelize');
+const sequelize = require("../../database")
+
+const userModel = sequelize.define("Users",{
+    firstName: {
+        type: DataTypes.STRING,
+        allowNull: false,
+    },
+    lastName: {
+        type:DataTypes.STRING,
+    },
+    email:{
+        type:DataTypes.STRING,
+        unique:true,
+    },
+    password:{
+        type: DataTypes.STRING,
+    },
+    githubId: {
+        type: DataTypes.STRING,
+        defaultValue: null,
+    }
+}, {
+    timestamps:true,
+});
+
+module.exports = userModel;
+
