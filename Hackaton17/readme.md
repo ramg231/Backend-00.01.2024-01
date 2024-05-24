@@ -19,7 +19,7 @@ Demostrarás todo lo aprendido en este reto que se basará en las clases dictada
 ## Reto 1:
 
 ### TÍTULO: Despliegue de aplicaciones
-Vamos a crear una aplicaciony deplegarla como docker y como render
+Vamos a crear una aplicacion y deplegarla como docker y como render
 #### EL PROBLEMA: 
 
 Vamos a crear una aplicacion y deplegarla como docker y como render
